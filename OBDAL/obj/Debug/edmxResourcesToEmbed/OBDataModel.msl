@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="OBModelStoreContainer" CdmEntityContainer="Entities">
+    <EntitySetMapping Name="Segments">
+      <EntityTypeMapping TypeName="OBModel.Segment">
+        <MappingFragment StoreEntitySet="Segment">
+          <ScalarProperty Name="SegmentID" ColumnName="SegmentID" />
+          <ScalarProperty Name="SegmentName" ColumnName="SegmentName" />
+          <ScalarProperty Name="SegmentOrder" ColumnName="SegmentOrder" />
+          <ScalarProperty Name="ShapeFormat" ColumnName="ShapeFormat" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

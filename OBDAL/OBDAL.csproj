@@ -1,0 +1,209 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1B478A4A-0DB8-4136-B070-2B4224DC1D16}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OBDAL</RootNamespace>
+    <AssemblyName>OBDAL</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccountCode.cs">
+      <DependentUpon>OBDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AccountCodeDAL.cs" />
+    <Compile Include="BPEventLog.cs">
+      <DependentUpon>OBDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BPLanguage.cs">
+      <DependentUpon>OBDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BudgetMenguru.cs">
+      <DependentUpon>OBDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BudgetMengurusDAL.cs" />
+    <Compile Include="BudgetPerjawatan.cs">
+      <DependentUpon>OBDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BudgetPerjawatanDAL.cs" />
+    <Compile Include="BudgetProjek.cs">
+      <DependentUpon>OBDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CommonHelperDAL.cs" />
+    <Compile Include="BudgetProjekDAL.cs" />
+    <Compile Include="JuncBgtProjekSegDtl.cs">
+      <DependentUpon>OBDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YearUploadDAL.cs" />
+    <Compile Include="ErrorLoggerDAL.cs" />
+    <Compile Include="FieldMenguru.cs">
+      <DependentUpon>OBDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FieldMenguruDAL.cs" />
+    <Compile Include="FieldPerjawatan.cs">
+      <DependentUpon>OBDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FieldPerjawatanDAL.cs" />
+    <Compile Include="GroupPerjawatan.cs">
+      <DependentUpon>OBDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GroupPerjawatanDAL.cs" />
+    <Compile Include="EventLogDAL.cs" />
+    <Compile Include="JuncBgtMengurusSegDtl.cs">
+      <DependentUpon>OBDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="JuncBgtPerjawatanSegDtl.cs">
+      <DependentUpon>OBDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="JuncRolePage.cs">
+      <DependentUpon>OBDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="JuncUserRole.cs">
+      <DependentUpon>OBDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LanguageDAL.cs" />
+    <Compile Include="MasterGroup.cs">
+      <DependentUpon>OBDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MasterMenu.cs">
+      <DependentUpon>OBDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPage.cs">
+      <DependentUpon>OBDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MasterRole.cs">
+      <DependentUpon>OBDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MasterUser.cs">
+      <DependentUpon>OBDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OBDatabase.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OBDatabase.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OBDatabase.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OBDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OBDatabase.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OBDatabase.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="PeriodMenguru.cs">
+      <DependentUpon>OBDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PeriodMengurusDAL.cs" />
+    <Compile Include="PeriodPerjawatan.cs">
+      <DependentUpon>OBDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PeriodPerjawatanDAL.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Segment.cs">
+      <DependentUpon>OBDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SegmentDAL.cs" />
+    <Compile Include="SegmentDetail.cs">
+      <DependentUpon>OBDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SegmentDetailsDAL.cs" />
+    <Compile Include="UserDAL.cs" />
+    <Compile Include="UserGroupDAL.cs" />
+    <Compile Include="UserMengurusWorkflow.cs">
+      <DependentUpon>OBDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UserPerjawatanWorkflow.cs">
+      <DependentUpon>OBDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UserSegDtlWorkflow.cs">
+      <DependentUpon>OBDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YearEnd.cs">
+      <DependentUpon>OBDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YearEndDAL.cs" />
+    <Compile Include="YearUploadSetup.cs">
+      <DependentUpon>OBDatabase.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <EntityDeploy Include="OBDatabase.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>OBDatabase.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="OBDatabase.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>OBDatabase.edmx</DependentUpon>
+      <LastGenOutput>OBDatabase.Context.cs</LastGenOutput>
+    </None>
+    <None Include="OBDatabase.edmx.diagram">
+      <DependentUpon>OBDatabase.edmx</DependentUpon>
+    </None>
+    <None Include="OBDatabase.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>OBDatabase.edmx</DependentUpon>
+      <LastGenOutput>OBDatabase.cs</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\OBSecurity\OBSecurity.csproj">
+      <Project>{4a2e9aa2-b04c-4f18-9777-c0d557b1c4f9}</Project>
+      <Name>OBSecurity</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

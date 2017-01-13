@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BudgetPrep", "BudgetPrep\BudgetPrep.csproj", "{0737EE3D-F2B0-4377-BFF3-552137744475}"
+	ProjectSection(ProjectDependencies) = postProject
+		{DE9DF098-EA3A-4BD8-B66C-35853F638C76} = {DE9DF098-EA3A-4BD8-B66C-35853F638C76}
+		{4A2E9AA2-B04C-4F18-9777-C0D557B1C4F9} = {4A2E9AA2-B04C-4F18-9777-C0D557B1C4F9}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OBBAL", "OBBAL\OBBAL.csproj", "{DE9DF098-EA3A-4BD8-B66C-35853F638C76}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OBDAL", "OBDAL\OBDAL.csproj", "{1B478A4A-0DB8-4136-B070-2B4224DC1D16}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OBSecurity", "OBSecurity\OBSecurity.csproj", "{4A2E9AA2-B04C-4F18-9777-C0D557B1C4F9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0737EE3D-F2B0-4377-BFF3-552137744475}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0737EE3D-F2B0-4377-BFF3-552137744475}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0737EE3D-F2B0-4377-BFF3-552137744475}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0737EE3D-F2B0-4377-BFF3-552137744475}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE9DF098-EA3A-4BD8-B66C-35853F638C76}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE9DF098-EA3A-4BD8-B66C-35853F638C76}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE9DF098-EA3A-4BD8-B66C-35853F638C76}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE9DF098-EA3A-4BD8-B66C-35853F638C76}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{1B478A4A-0DB8-4136-B070-2B4224DC1D16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B478A4A-0DB8-4136-B070-2B4224DC1D16}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B478A4A-0DB8-4136-B070-2B4224DC1D16}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B478A4A-0DB8-4136-B070-2B4224DC1D16}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{4A2E9AA2-B04C-4F18-9777-C0D557B1C4F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A2E9AA2-B04C-4F18-9777-C0D557B1C4F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A2E9AA2-B04C-4F18-9777-C0D557B1C4F9}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A2E9AA2-B04C-4F18-9777-C0D557B1C4F9}.Release|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

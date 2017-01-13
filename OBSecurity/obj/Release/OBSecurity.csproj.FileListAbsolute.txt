@@ -1,0 +1,8 @@
+D:\Projects\OnlineBudget\BudgetPrep\BudgetPrep\OBSecurity\bin\Release\OBSecurity.exe.config
+D:\Projects\OnlineBudget\BudgetPrep\BudgetPrep\OBSecurity\bin\Release\OBSecurity.exe
+D:\Projects\OnlineBudget\BudgetPrep\BudgetPrep\OBSecurity\bin\Release\OBSecurity.pdb
+D:\Projects\OnlineBudget\BudgetPrep\BudgetPrep\OBSecurity\obj\Release\OBSecurity.Form1.resources
+D:\Projects\OnlineBudget\BudgetPrep\BudgetPrep\OBSecurity\obj\Release\OBSecurity.Properties.Resources.resources
+D:\Projects\OnlineBudget\BudgetPrep\BudgetPrep\OBSecurity\obj\Release\OBSecurity.csproj.GenerateResource.Cache
+D:\Projects\OnlineBudget\BudgetPrep\BudgetPrep\OBSecurity\obj\Release\OBSecurity.exe
+D:\Projects\OnlineBudget\BudgetPrep\BudgetPrep\OBSecurity\obj\Release\OBSecurity.pdb

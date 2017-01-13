@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="OBModel.Store" Alias="Self" Provider="Npgsql" ProviderManifestToken="8.4.20" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="OBModelStoreContainer">
+    <EntitySet Name="Segment" EntityType="OBModel.Store.Segment" store:Type="Tables" Schema="public" />
+  </EntityContainer>
+  <EntityType Name="Segment">
+    <Key>
+      <PropertyRef Name="SegmentID" />
+    </Key>
+    <Property Name="SegmentID" Type="int4" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="SegmentName" Type="varchar" Nullable="false" MaxLength="40" />
+    <Property Name="SegmentOrder" Type="int4" />
+    <Property Name="ShapeFormat" Type="varchar" Nullable="false" MaxLength="15" />
+  </EntityType>
+</Schema>

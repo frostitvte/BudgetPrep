@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="378b686a986d4085a2ce9c50d164e80e" Name="Diagram1" ZoomLevel="81">
+        <EntityTypeShape EntityType="OBModel.BudgetMenguru" Width="1.5" PointX="8.25" PointY="14.125" />
+        <EntityTypeShape EntityType="OBModel.BudgetPerjawatan" Width="1.5" PointX="8.25" PointY="19.125" />
+        <EntityTypeShape EntityType="OBModel.FieldMenguru" Width="1.5" PointX="3.75" PointY="21.375" />
+        <EntityTypeShape EntityType="OBModel.FieldPerjawatan" Width="1.5" PointX="3.75" PointY="29.5" />
+        <EntityTypeShape EntityType="OBModel.GroupPerjawatan" Width="1.5" PointX="3" PointY="17.375" />
+        <EntityTypeShape EntityType="OBModel.JuncBgtMengurusSegDtl" Width="1.5" PointX="10.5" PointY="10.375" />
+        <EntityTypeShape EntityType="OBModel.JuncBgtPerjawatanSegDtl" Width="1.5" PointX="10.5" PointY="18.875" />
+        <EntityTypeShape EntityType="OBModel.JuncRolePage" Width="1.5" PointX="5.25" PointY="0.75" />
+        <EntityTypeShape EntityType="OBModel.JuncUserRole" Width="1.5" PointX="5.25" PointY="3.75" />
+        <EntityTypeShape EntityType="OBModel.MasterMenu" Width="1.5" PointX="6" PointY="25.875" />
+        <EntityTypeShape EntityType="OBModel.MasterPage" Width="1.5" PointX="8.25" PointY="1.5" />
+        <EntityTypeShape EntityType="OBModel.MasterRole" Width="1.5" PointX="3" PointY="1.875" />
+        <EntityTypeShape EntityType="OBModel.PeriodMenguru" Width="1.5" PointX="6" PointY="21.25" />
+        <EntityTypeShape EntityType="OBModel.PeriodPerjawatan" Width="1.5" PointX="6" PointY="29.375" />
+        <EntityTypeShape EntityType="OBModel.Segment" Width="1.5" PointX="0.75" PointY="12.375" />
+        <EntityTypeShape EntityType="OBModel.SegmentDetail" Width="1.5" PointX="3" PointY="11.875" />
+        <AssociationConnector Association="OBModel.BudgetMengurus_PeriodMengurus" />
+        <AssociationConnector Association="OBModel.JuncBgtMengurusSegDtl_BudgetMengurus" />
+        <AssociationConnector Association="OBModel.BudgetPerjawatan_GroupPerjawatan" />
+        <AssociationConnector Association="OBModel.BudgetPerjawatan_PeriodPerjawatan" />
+        <AssociationConnector Association="OBModel.JuncBgtPerjawatanSegDtl_BudgetPerjawatan" />
+        <AssociationConnector Association="OBModel.PeriodMengurus_FieldPerjawatan" />
+        <AssociationConnector Association="OBModel.PeriodPerjawatan_FieldPerjawatan" />
+        <AssociationConnector Association="OBModel.JuncBgtMengurusSegDtl_SegmentDetail" />
+        <AssociationConnector Association="OBModel.JuncBgtPerjawatanSegDtl_SegmentDetail" />
+        <AssociationConnector Association="OBModel.JuncRolePage_Page" />
+        <AssociationConnector Association="OBModel.JuncRolePage_Role" />
+        <AssociationConnector Association="OBModel.JuncUserRole_Role" />
+        <AssociationConnector Association="OBModel.Menu_Page" />
+        <AssociationConnector Association="OBModel.Role_Role" />
+        <AssociationConnector Association="OBModel.SegmentDetail_Segment" />
+        <EntityTypeShape EntityType="OBModel.UserMengurusWorkflow" Width="1.5" PointX="8.25" PointY="6.75" />
+        <EntityTypeShape EntityType="OBModel.UserPerjawatanWorkflow" Width="1.5" PointX="5.25" PointY="9.75" />
+        <AssociationConnector Association="OBModel.UserPerjawatanWorkflow_AccountCode" />
+        <EntityTypeShape EntityType="OBModel.AccountCode" Width="1.5" PointX="6" PointY="14.125" />
+        <AssociationConnector Association="OBModel.BudgetMengurus_AccountCode" />
+        <AssociationConnector Association="OBModel.UserWorkflow_AccountCode" />
+        <EntityTypeShape EntityType="OBModel.MasterGroup" Width="1.5" PointX="0.75" PointY="6.5" />
+        <EntityTypeShape EntityType="OBModel.BPEventLog" Width="1.5" PointX="7.75" PointY="9.75" />
+        <EntityTypeShape EntityType="OBModel.YearEnd" Width="1.5" PointX="10.75" PointY="1.75" />
+        <EntityTypeShape EntityType="OBModel.UserSegDtlWorkflow" Width="1.5" PointX="5.25" PointY="6.75" />
+        <AssociationConnector Association="OBModel.UserSegDtlWorkflow_SegDtls" />
+        <EntityTypeShape EntityType="OBModel.BPLanguage" Width="1.5" PointX="10.75" PointY="5.75" />
+        <EntityTypeShape EntityType="OBModel.MasterUser" Width="1.5" PointX="3" PointY="4.625" />
+        <AssociationConnector Association="OBModel.JuncUserRole_User" />
+        <AssociationConnector Association="OBModel.UserGroup" />
+        <AssociationConnector Association="OBModel.UserPerjawatanWorkflow_User" />
+        <AssociationConnector Association="OBModel.UserSegDtlWorkflow_User" />
+        <AssociationConnector Association="OBModel.UserWorkflow_User" />
+        <EntityTypeShape EntityType="OBModel.YearUploadSetup" Width="1.5" PointX="12.75" PointY="1.75" />
+        <EntityTypeShape EntityType="OBModel.BudgetProjek" Width="1.5" PointX="11.25" PointY="14.125" />
+        <EntityTypeShape EntityType="OBModel.JuncBgtProjekSegDtl" Width="1.5" PointX="13.5" PointY="13.375" />
+        <AssociationConnector Association="OBModel.BudgetProjek_AccountCode" />
+        <AssociationConnector Association="OBModel.BudgetProjek_PeriodMengurus" />
+        <AssociationConnector Association="OBModel.JuncBgtProjekSegDtl_BudgetProjek" />
+        <AssociationConnector Association="OBModel.JuncBgtProjekSegDtl_SegmentDetail" />
+        </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

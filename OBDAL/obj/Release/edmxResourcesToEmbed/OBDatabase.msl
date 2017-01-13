@@ -1,0 +1,384 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="OBModelStoreContainer" CdmEntityContainer="OBEntities">
+    <EntitySetMapping Name="BudgetMengurus">
+      <EntityTypeMapping TypeName="IsTypeOf(OBModel.BudgetMenguru)">
+        <MappingFragment StoreEntitySet="BudgetMengurus">
+          <ScalarProperty Name="BudgetMengurusID" ColumnName="BudgetMengurusID" />
+          <ScalarProperty Name="PeriodMengurusID" ColumnName="PeriodMengurusID" />
+          <ScalarProperty Name="AccountCode" ColumnName="AccountCode" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedTimeStamp" ColumnName="CreatedTimeStamp" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedTimeStamp" ColumnName="ModifiedTimeStamp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BudgetPerjawatans">
+      <EntityTypeMapping TypeName="IsTypeOf(OBModel.BudgetPerjawatan)">
+        <MappingFragment StoreEntitySet="BudgetPerjawatans">
+          <ScalarProperty Name="BudgetPerjawatanID" ColumnName="BudgetPerjawatanID" />
+          <ScalarProperty Name="PeriodPerjawatanID" ColumnName="PeriodPerjawatanID" />
+          <ScalarProperty Name="GroupPerjawatanCode" ColumnName="GroupPerjawatanCode" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedTimeStamp" ColumnName="CreatedTimeStamp" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedTimeStamp" ColumnName="ModifiedTimeStamp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FieldMengurus">
+      <EntityTypeMapping TypeName="IsTypeOf(OBModel.FieldMenguru)">
+        <MappingFragment StoreEntitySet="FieldMengurus">
+          <ScalarProperty Name="FieldMengurusID" ColumnName="FieldMengurusID" />
+          <ScalarProperty Name="FieldMengurusSDesc" ColumnName="FieldMengurusSDesc" />
+          <ScalarProperty Name="FieldMengurusDesc" ColumnName="FieldMengurusDesc" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedTimeStamp" ColumnName="CreatedTimeStamp" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedTimeStamp" ColumnName="ModifiedTimeStamp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FieldPerjawatans">
+      <EntityTypeMapping TypeName="IsTypeOf(OBModel.FieldPerjawatan)">
+        <MappingFragment StoreEntitySet="FieldPerjawatans">
+          <ScalarProperty Name="FieldPerjawatanID" ColumnName="FieldPerjawatanID" />
+          <ScalarProperty Name="FieldPerjawatanSDesc" ColumnName="FieldPerjawatanSDesc" />
+          <ScalarProperty Name="FieldPerjawatanDesc" ColumnName="FieldPerjawatanDesc" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedTimeStamp" ColumnName="CreatedTimeStamp" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedTimeStamp" ColumnName="ModifiedTimeStamp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GroupPerjawatans">
+      <EntityTypeMapping TypeName="IsTypeOf(OBModel.GroupPerjawatan)">
+        <MappingFragment StoreEntitySet="GroupPerjawatans">
+          <ScalarProperty Name="GroupPerjawatanCode" ColumnName="GroupPerjawatanCode" />
+          <ScalarProperty Name="GroupPerjawatanDesc" ColumnName="GroupPerjawatanDesc" />
+          <ScalarProperty Name="ParentGroupPerjawatanID" ColumnName="ParentGroupPerjawatanID" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedTimeStamp" ColumnName="CreatedTimeStamp" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedTimeStamp" ColumnName="ModifiedTimeStamp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="JuncBgtMengurusSegDtls">
+      <EntityTypeMapping TypeName="IsTypeOf(OBModel.JuncBgtMengurusSegDtl)">
+        <MappingFragment StoreEntitySet="JuncBgtMengurusSegDtls">
+          <ScalarProperty Name="JuncBgtMengurusSegDtlID" ColumnName="JuncBgtMengurusSegDtlID" />
+          <ScalarProperty Name="BudgetMengurusID" ColumnName="BudgetMengurusID" />
+          <ScalarProperty Name="SegmentDetailID" ColumnName="SegmentDetailID" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedTimeStamp" ColumnName="CreatedTimeStamp" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedTimeStamp" ColumnName="ModifiedTimeStamp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="JuncBgtPerjawatanSegDtls">
+      <EntityTypeMapping TypeName="IsTypeOf(OBModel.JuncBgtPerjawatanSegDtl)">
+        <MappingFragment StoreEntitySet="JuncBgtPerjawatanSegDtls">
+          <ScalarProperty Name="JuncBgtPerjawatanSegDtlID" ColumnName="JuncBgtPerjawatanSegDtlID" />
+          <ScalarProperty Name="BudgetPerjawatanID" ColumnName="BudgetPerjawatanID" />
+          <ScalarProperty Name="SegmentDetailID" ColumnName="SegmentDetailID" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedTimeStamp" ColumnName="CreatedTimeStamp" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedTimeStamp" ColumnName="ModifiedTimeStamp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="JuncRolePages">
+      <EntityTypeMapping TypeName="IsTypeOf(OBModel.JuncRolePage)">
+        <MappingFragment StoreEntitySet="JuncRolePages">
+          <ScalarProperty Name="JuncRolePageID" ColumnName="JuncRolePageID" />
+          <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+          <ScalarProperty Name="PageID" ColumnName="PageID" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="JuncUserRoles">
+      <EntityTypeMapping TypeName="IsTypeOf(OBModel.JuncUserRole)">
+        <MappingFragment StoreEntitySet="JuncUserRoles">
+          <ScalarProperty Name="JuncUserRoleID" ColumnName="JuncUserRoleID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MasterMenus">
+      <EntityTypeMapping TypeName="IsTypeOf(OBModel.MasterMenu)">
+        <MappingFragment StoreEntitySet="MasterMenus">
+          <ScalarProperty Name="MenuID" ColumnName="MenuID" />
+          <ScalarProperty Name="MenuName" ColumnName="MenuName" />
+          <ScalarProperty Name="MenuOrder" ColumnName="MenuOrder" />
+          <ScalarProperty Name="MenuIcon" ColumnName="MenuIcon" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MasterPages">
+      <EntityTypeMapping TypeName="IsTypeOf(OBModel.MasterPage)">
+        <MappingFragment StoreEntitySet="MasterPages">
+          <ScalarProperty Name="PageID" ColumnName="PageID" />
+          <ScalarProperty Name="PageName" ColumnName="PageName" />
+          <ScalarProperty Name="PagePath" ColumnName="PagePath" />
+          <ScalarProperty Name="PageOrder" ColumnName="PageOrder" />
+          <ScalarProperty Name="ParentPageID" ColumnName="ParentPageID" />
+          <ScalarProperty Name="MenuID" ColumnName="MenuID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MasterRoles">
+      <EntityTypeMapping TypeName="IsTypeOf(OBModel.MasterRole)">
+        <MappingFragment StoreEntitySet="MasterRoles">
+          <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+          <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PeriodMengurus">
+      <EntityTypeMapping TypeName="IsTypeOf(OBModel.PeriodMenguru)">
+        <MappingFragment StoreEntitySet="PeriodMengurus">
+          <ScalarProperty Name="PeriodMengurusID" ColumnName="PeriodMengurusID" />
+          <ScalarProperty Name="FieldMengurusID" ColumnName="FieldMengurusID" />
+          <ScalarProperty Name="MengurusYear" ColumnName="MengurusYear" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedTimeStamp" ColumnName="CreatedTimeStamp" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedTimeStamp" ColumnName="ModifiedTimeStamp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PeriodPerjawatans">
+      <EntityTypeMapping TypeName="IsTypeOf(OBModel.PeriodPerjawatan)">
+        <MappingFragment StoreEntitySet="PeriodPerjawatans">
+          <ScalarProperty Name="PeriodPerjawatanID" ColumnName="PeriodPerjawatanID" />
+          <ScalarProperty Name="FieldPerjawatanID" ColumnName="FieldPerjawatanID" />
+          <ScalarProperty Name="PerjawatanYear" ColumnName="PerjawatanYear" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedTimeStamp" ColumnName="CreatedTimeStamp" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedTimeStamp" ColumnName="ModifiedTimeStamp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Segments">
+      <EntityTypeMapping TypeName="IsTypeOf(OBModel.Segment)">
+        <MappingFragment StoreEntitySet="Segments">
+          <ScalarProperty Name="SegmentID" ColumnName="SegmentID" />
+          <ScalarProperty Name="SegmentName" ColumnName="SegmentName" />
+          <ScalarProperty Name="SegmentOrder" ColumnName="SegmentOrder" />
+          <ScalarProperty Name="ShapeFormat" ColumnName="ShapeFormat" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedTimeStamp" ColumnName="CreatedTimeStamp" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedTimeStamp" ColumnName="ModifiedTimeStamp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SegmentDetails">
+      <EntityTypeMapping TypeName="IsTypeOf(OBModel.SegmentDetail)">
+        <MappingFragment StoreEntitySet="SegmentDetails">
+          <ScalarProperty Name="SegmentDetailID" ColumnName="SegmentDetailID" />
+          <ScalarProperty Name="SegmentID" ColumnName="SegmentID" />
+          <ScalarProperty Name="DetailCode" ColumnName="DetailCode" />
+          <ScalarProperty Name="DetailDesc" ColumnName="DetailDesc" />
+          <ScalarProperty Name="ParentDetailID" ColumnName="ParentDetailID" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedTimeStamp" ColumnName="CreatedTimeStamp" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedTimeStamp" ColumnName="ModifiedTimeStamp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserMengurusWorkflows">
+      <EntityTypeMapping TypeName="IsTypeOf(OBModel.UserMengurusWorkflow)">
+        <MappingFragment StoreEntitySet="UserMengurusWorkflows">
+          <ScalarProperty Name="UserMengurusWorkflowID" ColumnName="UserMengurusWorkflowID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="AccountCode" ColumnName="AccountCode" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserPerjawatanWorkflows">
+      <EntityTypeMapping TypeName="IsTypeOf(OBModel.UserPerjawatanWorkflow)">
+        <MappingFragment StoreEntitySet="UserPerjawatanWorkflows">
+          <ScalarProperty Name="UserPerjawatanWorkflowID" ColumnName="UserPerjawatanWorkflowID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="GroupPerjawatanCode" ColumnName="GroupPerjawatanCode" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AccountCodes">
+      <EntityTypeMapping TypeName="IsTypeOf(OBModel.AccountCode)">
+        <MappingFragment StoreEntitySet="AccountCodes">
+          <ScalarProperty Name="AccountCode1" ColumnName="AccountCode1" />
+          <ScalarProperty Name="AccountDesc" ColumnName="AccountDesc" />
+          <ScalarProperty Name="ParentAccountCode" ColumnName="ParentAccountCode" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedTimeStamp" ColumnName="CreatedTimeStamp" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedTimeStamp" ColumnName="ModifiedTimeStamp" />
+          <ScalarProperty Name="Keterangan" ColumnName="Keterangan" />
+          <ScalarProperty Name="Pengiraan" ColumnName="Pengiraan" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MasterGroups">
+      <EntityTypeMapping TypeName="IsTypeOf(OBModel.MasterGroup)">
+        <MappingFragment StoreEntitySet="MasterGroups">
+          <ScalarProperty Name="GroupID" ColumnName="GroupID" />
+          <ScalarProperty Name="GroupName" ColumnName="GroupName" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedTimeStamp" ColumnName="CreatedTimeStamp" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedTimeStamp" ColumnName="ModifiedTimeStamp" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BPEventLogs">
+      <EntityTypeMapping TypeName="IsTypeOf(OBModel.BPEventLog)">
+        <MappingFragment StoreEntitySet="BPEventLogs">
+          <ScalarProperty Name="EventLogID" ColumnName="EventLogID" />
+          <ScalarProperty Name="Object" ColumnName="Object" />
+          <ScalarProperty Name="ObjectName" ColumnName="ObjectName" />
+          <ScalarProperty Name="ObjectChanges" ColumnName="ObjectChanges" />
+          <ScalarProperty Name="EventMassage" ColumnName="EventMassage" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedTimeStamp" ColumnName="CreatedTimeStamp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="YearEnds">
+      <EntityTypeMapping TypeName="IsTypeOf(OBModel.YearEnd)">
+        <MappingFragment StoreEntitySet="YearEnds">
+          <ScalarProperty Name="YearEndID" ColumnName="YearEndID" />
+          <ScalarProperty Name="BudgetType" ColumnName="BudgetType" />
+          <ScalarProperty Name="BudgetYear" ColumnName="BudgetYear" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedTimeStamp" ColumnName="CreatedTimeStamp" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedTimeStamp" ColumnName="ModifiedTimeStamp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserSegDtlWorkflows">
+      <EntityTypeMapping TypeName="IsTypeOf(OBModel.UserSegDtlWorkflow)">
+        <MappingFragment StoreEntitySet="UserSegDtlWorkflows">
+          <ScalarProperty Name="UserSegDtlWorkflowID" ColumnName="UserSegDtlWorkflowID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="SegmentDetailID" ColumnName="SegmentDetailID" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BPLanguages">
+      <EntityTypeMapping TypeName="IsTypeOf(OBModel.BPLanguage)">
+        <MappingFragment StoreEntitySet="BPLanguages">
+          <ScalarProperty Name="LanguageID" ColumnName="LanguageID" />
+          <ScalarProperty Name="ControlName" ColumnName="ControlName" />
+          <ScalarProperty Name="English" ColumnName="English" />
+          <ScalarProperty Name="Malay" ColumnName="Malay" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MasterUsers">
+      <EntityTypeMapping TypeName="IsTypeOf(OBModel.MasterUser)">
+        <MappingFragment StoreEntitySet="MasterUsers">
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Passcode" ColumnName="Passcode" />
+          <ScalarProperty Name="GroupID" ColumnName="GroupID" />
+          <ScalarProperty Name="UserEmail" ColumnName="UserEmail" />
+          <ScalarProperty Name="SecQuestion" ColumnName="SecQuestion" />
+          <ScalarProperty Name="SecAnswer" ColumnName="SecAnswer" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedTimeStamp" ColumnName="CreatedTimeStamp" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedTimeStamp" ColumnName="ModifiedTimeStamp" />
+          <ScalarProperty Name="ICNO" ColumnName="ICNO" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="PositionGrade" ColumnName="PositionGrade" />
+          <ScalarProperty Name="PhoneNO" ColumnName="PhoneNO" />
+          <ScalarProperty Name="Fax" ColumnName="Fax" />
+          <ScalarProperty Name="Designation" ColumnName="Designation" />
+          <ScalarProperty Name="Department" ColumnName="Department" />
+          <ScalarProperty Name="PeriodOfService" ColumnName="PeriodOfService" />
+          <ScalarProperty Name="OfficeAddress" ColumnName="OfficeAddress" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Language" ColumnName="Language" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="YearUploadSetups">
+      <EntityTypeMapping TypeName="IsTypeOf(OBModel.YearUploadSetup)">
+        <MappingFragment StoreEntitySet="YearUploadSetups">
+          <ScalarProperty Name="BudgetYearID" ColumnName="BudgetYearID" />
+          <ScalarProperty Name="BudgetYear" ColumnName="BudgetYear" />
+          <ScalarProperty Name="BudgetYearDesc" ColumnName="BudgetYearDesc" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedTimeStamp" ColumnName="CreatedTimeStamp" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedTimeStamp" ColumnName="ModifiedTimeStamp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BudgetProjeks">
+      <EntityTypeMapping TypeName="IsTypeOf(OBModel.BudgetProjek)">
+        <MappingFragment StoreEntitySet="BudgetProjeks">
+          <ScalarProperty Name="BudgetProjekID" ColumnName="BudgetProjekID" />
+          <ScalarProperty Name="PeriodMengurusID" ColumnName="PeriodMengurusID" />
+          <ScalarProperty Name="AccountCode" ColumnName="AccountCode" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedTimeStamp" ColumnName="CreatedTimeStamp" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedTimeStamp" ColumnName="ModifiedTimeStamp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="JuncBgtProjekSegDtls">
+      <EntityTypeMapping TypeName="IsTypeOf(OBModel.JuncBgtProjekSegDtl)">
+        <MappingFragment StoreEntitySet="JuncBgtProjekSegDtls">
+          <ScalarProperty Name="JuncBgtProjekSegDtlID" ColumnName="JuncBgtProjekSegDtlID" />
+          <ScalarProperty Name="BudgetProjekID" ColumnName="BudgetProjekID" />
+          <ScalarProperty Name="SegmentDetailID" ColumnName="SegmentDetailID" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedTimeStamp" ColumnName="CreatedTimeStamp" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedTimeStamp" ColumnName="ModifiedTimeStamp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

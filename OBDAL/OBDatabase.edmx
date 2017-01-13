@@ -1,0 +1,2117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="OBModel.Store" Alias="Self" Provider="Npgsql" ProviderManifestToken="9.4.1" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="OBModelStoreContainer">
+          <EntitySet Name="AccountCode" EntityType="OBModel.Store.AccountCode" store:Type="Tables" Schema="public" />
+          <EntitySet Name="BPEventLog" EntityType="OBModel.Store.BPEventLog" store:Type="Tables" Schema="public" />
+          <EntitySet Name="BPLanguage" EntityType="OBModel.Store.BPLanguage" store:Type="Tables" Schema="public" />
+          <EntitySet Name="BudgetMengurus" EntityType="OBModel.Store.BudgetMengurus" store:Type="Tables" Schema="public" />
+          <EntitySet Name="BudgetPerjawatan" EntityType="OBModel.Store.BudgetPerjawatan" store:Type="Tables" Schema="public" />
+          <EntitySet Name="BudgetProjek" EntityType="OBModel.Store.BudgetProjek" store:Type="Tables" Schema="public" />
+          <EntitySet Name="FieldMengurus" EntityType="OBModel.Store.FieldMengurus" store:Type="Tables" Schema="public" />
+          <EntitySet Name="FieldPerjawatan" EntityType="OBModel.Store.FieldPerjawatan" store:Type="Tables" Schema="public" />
+          <EntitySet Name="GroupPerjawatan" EntityType="OBModel.Store.GroupPerjawatan" store:Type="Tables" Schema="public" />
+          <EntitySet Name="JuncBgtMengurusSegDtl" EntityType="OBModel.Store.JuncBgtMengurusSegDtl" store:Type="Tables" Schema="public" />
+          <EntitySet Name="JuncBgtPerjawatanSegDtl" EntityType="OBModel.Store.JuncBgtPerjawatanSegDtl" store:Type="Tables" Schema="public" />
+          <EntitySet Name="JuncBgtProjekSegDtl" EntityType="OBModel.Store.JuncBgtProjekSegDtl" store:Type="Tables" Schema="public" />
+          <EntitySet Name="JuncRolePage" EntityType="OBModel.Store.JuncRolePage" store:Type="Tables" Schema="public" />
+          <EntitySet Name="JuncUserRole" EntityType="OBModel.Store.JuncUserRole" store:Type="Tables" Schema="public" />
+          <EntitySet Name="MasterGroup" EntityType="OBModel.Store.MasterGroup" store:Type="Tables" Schema="public" />
+          <EntitySet Name="MasterMenu" EntityType="OBModel.Store.MasterMenu" store:Type="Tables" Schema="public" />
+          <EntitySet Name="MasterPage" EntityType="OBModel.Store.MasterPage" store:Type="Tables" Schema="public" />
+          <EntitySet Name="MasterRole" EntityType="OBModel.Store.MasterRole" store:Type="Tables" Schema="public" />
+          <EntitySet Name="MasterUser" EntityType="OBModel.Store.MasterUser" store:Type="Tables" Schema="public" />
+          <EntitySet Name="PeriodMengurus" EntityType="OBModel.Store.PeriodMengurus" store:Type="Tables" Schema="public" />
+          <EntitySet Name="PeriodPerjawatan" EntityType="OBModel.Store.PeriodPerjawatan" store:Type="Tables" Schema="public" />
+          <EntitySet Name="Segment" EntityType="OBModel.Store.Segment" store:Type="Tables" Schema="public" />
+          <EntitySet Name="SegmentDetail" EntityType="OBModel.Store.SegmentDetail" store:Type="Tables" Schema="public" />
+          <EntitySet Name="UserMengurusWorkflow" EntityType="OBModel.Store.UserMengurusWorkflow" store:Type="Tables" Schema="public" />
+          <EntitySet Name="UserPerjawatanWorkflow" EntityType="OBModel.Store.UserPerjawatanWorkflow" store:Type="Tables" Schema="public" />
+          <EntitySet Name="UserSegDtlWorkflow" EntityType="OBModel.Store.UserSegDtlWorkflow" store:Type="Tables" Schema="public" />
+          <EntitySet Name="YearEnd" EntityType="OBModel.Store.YearEnd" store:Type="Tables" Schema="public" />
+          <EntitySet Name="YearUploadSetup" EntityType="OBModel.Store.YearUploadSetup" store:Type="Tables" Schema="public" />
+          <AssociationSet Name="BudgetMengurus_AccountCode" Association="OBModel.Store.BudgetMengurus_AccountCode">
+            <End Role="AccountCode" EntitySet="AccountCode" />
+            <End Role="BudgetMengurus" EntitySet="BudgetMengurus" />
+          </AssociationSet>
+          <AssociationSet Name="BudgetMengurus_PeriodMengurus" Association="OBModel.Store.BudgetMengurus_PeriodMengurus">
+            <End Role="PeriodMengurus" EntitySet="PeriodMengurus" />
+            <End Role="BudgetMengurus" EntitySet="BudgetMengurus" />
+          </AssociationSet>
+          <AssociationSet Name="BudgetPerjawatan_GroupPerjawatan" Association="OBModel.Store.BudgetPerjawatan_GroupPerjawatan">
+            <End Role="GroupPerjawatan" EntitySet="GroupPerjawatan" />
+            <End Role="BudgetPerjawatan" EntitySet="BudgetPerjawatan" />
+          </AssociationSet>
+          <AssociationSet Name="BudgetPerjawatan_PeriodPerjawatan" Association="OBModel.Store.BudgetPerjawatan_PeriodPerjawatan">
+            <End Role="PeriodPerjawatan" EntitySet="PeriodPerjawatan" />
+            <End Role="BudgetPerjawatan" EntitySet="BudgetPerjawatan" />
+          </AssociationSet>
+          <AssociationSet Name="BudgetProjek_AccountCode" Association="OBModel.Store.BudgetProjek_AccountCode">
+            <End Role="AccountCode" EntitySet="AccountCode" />
+            <End Role="BudgetProjek" EntitySet="BudgetProjek" />
+          </AssociationSet>
+          <AssociationSet Name="BudgetProjek_PeriodMengurus" Association="OBModel.Store.BudgetProjek_PeriodMengurus">
+            <End Role="PeriodMengurus" EntitySet="PeriodMengurus" />
+            <End Role="BudgetProjek" EntitySet="BudgetProjek" />
+          </AssociationSet>
+          <AssociationSet Name="JuncBgtMengurusSegDtl_BudgetMengurus" Association="OBModel.Store.JuncBgtMengurusSegDtl_BudgetMengurus">
+            <End Role="BudgetMengurus" EntitySet="BudgetMengurus" />
+            <End Role="JuncBgtMengurusSegDtl" EntitySet="JuncBgtMengurusSegDtl" />
+          </AssociationSet>
+          <AssociationSet Name="JuncBgtMengurusSegDtl_SegmentDetail" Association="OBModel.Store.JuncBgtMengurusSegDtl_SegmentDetail">
+            <End Role="SegmentDetail" EntitySet="SegmentDetail" />
+            <End Role="JuncBgtMengurusSegDtl" EntitySet="JuncBgtMengurusSegDtl" />
+          </AssociationSet>
+          <AssociationSet Name="JuncBgtPerjawatanSegDtl_BudgetPerjawatan" Association="OBModel.Store.JuncBgtPerjawatanSegDtl_BudgetPerjawatan">
+            <End Role="BudgetPerjawatan" EntitySet="BudgetPerjawatan" />
+            <End Role="JuncBgtPerjawatanSegDtl" EntitySet="JuncBgtPerjawatanSegDtl" />
+          </AssociationSet>
+          <AssociationSet Name="JuncBgtPerjawatanSegDtl_SegmentDetail" Association="OBModel.Store.JuncBgtPerjawatanSegDtl_SegmentDetail">
+            <End Role="SegmentDetail" EntitySet="SegmentDetail" />
+            <End Role="JuncBgtPerjawatanSegDtl" EntitySet="JuncBgtPerjawatanSegDtl" />
+          </AssociationSet>
+          <AssociationSet Name="JuncBgtProjekSegDtl_BudgetProjek" Association="OBModel.Store.JuncBgtProjekSegDtl_BudgetProjek">
+            <End Role="BudgetProjek" EntitySet="BudgetProjek" />
+            <End Role="JuncBgtProjekSegDtl" EntitySet="JuncBgtProjekSegDtl" />
+          </AssociationSet>
+          <AssociationSet Name="JuncBgtProjekSegDtl_SegmentDetail" Association="OBModel.Store.JuncBgtProjekSegDtl_SegmentDetail">
+            <End Role="SegmentDetail" EntitySet="SegmentDetail" />
+            <End Role="JuncBgtProjekSegDtl" EntitySet="JuncBgtProjekSegDtl" />
+          </AssociationSet>
+          <AssociationSet Name="JuncRolePage_Page" Association="OBModel.Store.JuncRolePage_Page">
+            <End Role="MasterPage" EntitySet="MasterPage" />
+            <End Role="JuncRolePage" EntitySet="JuncRolePage" />
+          </AssociationSet>
+          <AssociationSet Name="JuncRolePage_Role" Association="OBModel.Store.JuncRolePage_Role">
+            <End Role="MasterRole" EntitySet="MasterRole" />
+            <End Role="JuncRolePage" EntitySet="JuncRolePage" />
+          </AssociationSet>
+          <AssociationSet Name="JuncUserRole_Role" Association="OBModel.Store.JuncUserRole_Role">
+            <End Role="MasterRole" EntitySet="MasterRole" />
+            <End Role="JuncUserRole" EntitySet="JuncUserRole" />
+          </AssociationSet>
+          <AssociationSet Name="JuncUserRole_User" Association="OBModel.Store.JuncUserRole_User">
+            <End Role="MasterUser" EntitySet="MasterUser" />
+            <End Role="JuncUserRole" EntitySet="JuncUserRole" />
+          </AssociationSet>
+          <AssociationSet Name="Menu_Page" Association="OBModel.Store.Menu_Page">
+            <End Role="MasterMenu" EntitySet="MasterMenu" />
+            <End Role="MasterPage" EntitySet="MasterPage" />
+          </AssociationSet>
+          <AssociationSet Name="PeriodMengurus_FieldPerjawatan" Association="OBModel.Store.PeriodMengurus_FieldPerjawatan">
+            <End Role="FieldMengurus" EntitySet="FieldMengurus" />
+            <End Role="PeriodMengurus" EntitySet="PeriodMengurus" />
+          </AssociationSet>
+          <AssociationSet Name="PeriodPerjawatan_FieldPerjawatan" Association="OBModel.Store.PeriodPerjawatan_FieldPerjawatan">
+            <End Role="FieldPerjawatan" EntitySet="FieldPerjawatan" />
+            <End Role="PeriodPerjawatan" EntitySet="PeriodPerjawatan" />
+          </AssociationSet>
+          <AssociationSet Name="SegmentDetail_Segment" Association="OBModel.Store.SegmentDetail_Segment">
+            <End Role="Segment" EntitySet="Segment" />
+            <End Role="SegmentDetail" EntitySet="SegmentDetail" />
+          </AssociationSet>
+          <AssociationSet Name="UserGroup" Association="OBModel.Store.UserGroup">
+            <End Role="MasterGroup" EntitySet="MasterGroup" />
+            <End Role="MasterUser" EntitySet="MasterUser" />
+          </AssociationSet>
+          <AssociationSet Name="UserPerjawatanWorkflow_AccountCode" Association="OBModel.Store.UserPerjawatanWorkflow_AccountCode">
+            <End Role="GroupPerjawatan" EntitySet="GroupPerjawatan" />
+            <End Role="UserPerjawatanWorkflow" EntitySet="UserPerjawatanWorkflow" />
+          </AssociationSet>
+          <AssociationSet Name="UserPerjawatanWorkflow_User" Association="OBModel.Store.UserPerjawatanWorkflow_User">
+            <End Role="MasterUser" EntitySet="MasterUser" />
+            <End Role="UserPerjawatanWorkflow" EntitySet="UserPerjawatanWorkflow" />
+          </AssociationSet>
+          <AssociationSet Name="UserSegDtlWorkflow_SegDtls" Association="OBModel.Store.UserSegDtlWorkflow_SegDtls">
+            <End Role="SegmentDetail" EntitySet="SegmentDetail" />
+            <End Role="UserSegDtlWorkflow" EntitySet="UserSegDtlWorkflow" />
+          </AssociationSet>
+          <AssociationSet Name="UserSegDtlWorkflow_User" Association="OBModel.Store.UserSegDtlWorkflow_User">
+            <End Role="MasterUser" EntitySet="MasterUser" />
+            <End Role="UserSegDtlWorkflow" EntitySet="UserSegDtlWorkflow" />
+          </AssociationSet>
+          <AssociationSet Name="UserWorkflow_AccountCode" Association="OBModel.Store.UserWorkflow_AccountCode">
+            <End Role="AccountCode" EntitySet="AccountCode" />
+            <End Role="UserMengurusWorkflow" EntitySet="UserMengurusWorkflow" />
+          </AssociationSet>
+          <AssociationSet Name="UserWorkflow_User" Association="OBModel.Store.UserWorkflow_User">
+            <End Role="MasterUser" EntitySet="MasterUser" />
+            <End Role="UserMengurusWorkflow" EntitySet="UserMengurusWorkflow" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="AccountCode">
+          <Key>
+            <PropertyRef Name="AccountCode" />
+          </Key>
+          <Property Name="AccountCode" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="AccountDesc" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="ParentAccountCode" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Status" Type="bpchar" Nullable="false" />
+          <Property Name="CreatedBy" Type="int4" />
+          <Property Name="CreatedTimeStamp" Type="timestamp" />
+          <Property Name="ModifiedBy" Type="int4" />
+          <Property Name="ModifiedTimeStamp" Type="timestamp" />
+          <Property Name="Keterangan" Type="bpchar" MaxLength="100" />
+          <Property Name="Pengiraan" Type="bpchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="BPEventLog">
+          <Key>
+            <PropertyRef Name="EventLogID" />
+          </Key>
+          <Property Name="EventLogID" Type="int4" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Object" Type="varchar" Nullable="false" MaxLength="75" />
+          <Property Name="ObjectName" Type="varchar" Nullable="false" MaxLength="200" />
+          <Property Name="ObjectChanges" Type="bpchar" MaxLength="1000" />
+          <Property Name="EventMassage" Type="bpchar" MaxLength="100" />
+          <Property Name="Status" Type="bpchar" />
+          <Property Name="CreatedBy" Type="int4" />
+          <Property Name="CreatedTimeStamp" Type="timestamp" />
+        </EntityType>
+        <EntityType Name="BPLanguage">
+          <Key>
+            <PropertyRef Name="LanguageID" />
+          </Key>
+          <Property Name="LanguageID" Type="int4" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ControlName" Type="varchar" MaxLength="100" />
+          <Property Name="English" Type="varchar" Nullable="false" MaxLength="200" />
+          <Property Name="Malay" Type="varchar" Nullable="false" MaxLength="200" />
+          <Property Name="Status" Type="bpchar" Nullable="false" />
+        </EntityType>
+        <EntityType Name="BudgetMengurus">
+          <Key>
+            <PropertyRef Name="BudgetMengurusID" />
+          </Key>
+          <Property Name="BudgetMengurusID" Type="int4" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="PeriodMengurusID" Type="int4" Nullable="false" />
+          <Property Name="AccountCode" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="Amount" Type="numeric" Nullable="false" Precision="16" Scale="2" />
+          <Property Name="Status" Type="bpchar" Nullable="false" />
+          <Property Name="Remarks" Type="bpchar" MaxLength="500" />
+          <Property Name="CreatedBy" Type="int4" />
+          <Property Name="CreatedTimeStamp" Type="timestamp" />
+          <Property Name="ModifiedBy" Type="int4" />
+          <Property Name="ModifiedTimeStamp" Type="timestamp" />
+        </EntityType>
+        <EntityType Name="BudgetPerjawatan">
+          <Key>
+            <PropertyRef Name="BudgetPerjawatanID" />
+          </Key>
+          <Property Name="BudgetPerjawatanID" Type="int4" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="PeriodPerjawatanID" Type="int4" Nullable="false" />
+          <Property Name="GroupPerjawatanCode" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="Amount" Type="numeric" Nullable="false" Precision="16" Scale="2" />
+          <Property Name="Status" Type="bpchar" Nullable="false" />
+          <Property Name="Remarks" Type="bpchar" MaxLength="500" />
+          <Property Name="CreatedBy" Type="int4" />
+          <Property Name="CreatedTimeStamp" Type="timestamp" />
+          <Property Name="ModifiedBy" Type="int4" />
+          <Property Name="ModifiedTimeStamp" Type="timestamp" />
+        </EntityType>
+        <EntityType Name="BudgetProjek">
+          <Key>
+            <PropertyRef Name="BudgetProjekID" />
+          </Key>
+          <Property Name="BudgetProjekID" Type="int4" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="PeriodMengurusID" Type="int4" Nullable="false" />
+          <Property Name="AccountCode" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="Amount" Type="numeric" Nullable="false" Precision="16" Scale="2" />
+          <Property Name="Status" Type="bpchar" Nullable="false" />
+          <Property Name="Remarks" Type="bpchar" MaxLength="500" />
+          <Property Name="CreatedBy" Type="int4" />
+          <Property Name="CreatedTimeStamp" Type="timestamp" />
+          <Property Name="ModifiedBy" Type="int4" />
+          <Property Name="ModifiedTimeStamp" Type="timestamp" />
+        </EntityType>
+        <EntityType Name="FieldMengurus">
+          <Key>
+            <PropertyRef Name="FieldMengurusID" />
+          </Key>
+          <Property Name="FieldMengurusID" Type="int4" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="FieldMengurusSDesc" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="FieldMengurusDesc" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Status" Type="bpchar" Nullable="false" />
+          <Property Name="CreatedBy" Type="int4" />
+          <Property Name="CreatedTimeStamp" Type="timestamp" />
+          <Property Name="ModifiedBy" Type="int4" />
+          <Property Name="ModifiedTimeStamp" Type="timestamp" />
+        </EntityType>
+        <EntityType Name="FieldPerjawatan">
+          <Key>
+            <PropertyRef Name="FieldPerjawatanID" />
+          </Key>
+          <Property Name="FieldPerjawatanID" Type="int4" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="FieldPerjawatanSDesc" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="FieldPerjawatanDesc" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Status" Type="bpchar" Nullable="false" />
+          <Property Name="CreatedBy" Type="int4" />
+          <Property Name="CreatedTimeStamp" Type="timestamp" />
+          <Property Name="ModifiedBy" Type="int4" />
+          <Property Name="ModifiedTimeStamp" Type="timestamp" />
+        </EntityType>
+        <EntityType Name="GroupPerjawatan">
+          <Key>
+            <PropertyRef Name="GroupPerjawatanCode" />
+          </Key>
+          <Property Name="GroupPerjawatanCode" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="GroupPerjawatanDesc" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="ParentGroupPerjawatanID" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Status" Type="bpchar" Nullable="false" />
+          <Property Name="CreatedBy" Type="int4" />
+          <Property Name="CreatedTimeStamp" Type="timestamp" />
+          <Property Name="ModifiedBy" Type="int4" />
+          <Property Name="ModifiedTimeStamp" Type="timestamp" />
+        </EntityType>
+        <EntityType Name="JuncBgtMengurusSegDtl">
+          <Key>
+            <PropertyRef Name="JuncBgtMengurusSegDtlID" />
+          </Key>
+          <Property Name="JuncBgtMengurusSegDtlID" Type="int4" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="BudgetMengurusID" Type="int4" Nullable="false" />
+          <Property Name="SegmentDetailID" Type="int4" Nullable="false" />
+          <Property Name="CreatedBy" Type="int4" />
+          <Property Name="CreatedTimeStamp" Type="timestamp" />
+          <Property Name="ModifiedBy" Type="int4" />
+          <Property Name="ModifiedTimeStamp" Type="timestamp" />
+        </EntityType>
+        <EntityType Name="JuncBgtPerjawatanSegDtl">
+          <Key>
+            <PropertyRef Name="JuncBgtPerjawatanSegDtlID" />
+          </Key>
+          <Property Name="JuncBgtPerjawatanSegDtlID" Type="int4" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="BudgetPerjawatanID" Type="int4" Nullable="false" />
+          <Property Name="SegmentDetailID" Type="int4" Nullable="false" />
+          <Property Name="CreatedBy" Type="int4" />
+          <Property Name="CreatedTimeStamp" Type="timestamp" />
+          <Property Name="ModifiedBy" Type="int4" />
+          <Property Name="ModifiedTimeStamp" Type="timestamp" />
+        </EntityType>
+        <EntityType Name="JuncBgtProjekSegDtl">
+          <Key>
+            <PropertyRef Name="JuncBgtProjekSegDtlID" />
+          </Key>
+          <Property Name="JuncBgtProjekSegDtlID" Type="int4" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="BudgetProjekID" Type="int4" Nullable="false" />
+          <Property Name="SegmentDetailID" Type="int4" Nullable="false" />
+          <Property Name="CreatedBy" Type="int4" />
+          <Property Name="CreatedTimeStamp" Type="timestamp" />
+          <Property Name="ModifiedBy" Type="int4" />
+          <Property Name="ModifiedTimeStamp" Type="timestamp" />
+        </EntityType>
+        <EntityType Name="JuncRolePage">
+          <Key>
+            <PropertyRef Name="JuncRolePageID" />
+          </Key>
+          <Property Name="JuncRolePageID" Type="int4" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="RoleID" Type="int4" />
+          <Property Name="PageID" Type="int4" />
+          <Property Name="Status" Type="bpchar" />
+        </EntityType>
+        <EntityType Name="JuncUserRole">
+          <Key>
+            <PropertyRef Name="JuncUserRoleID" />
+          </Key>
+          <Property Name="JuncUserRoleID" Type="int4" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="UserID" Type="int4" />
+          <Property Name="RoleID" Type="int4" />
+          <Property Name="Status" Type="bpchar" />
+        </EntityType>
+        <EntityType Name="MasterGroup">
+          <Key>
+            <PropertyRef Name="GroupID" />
+          </Key>
+          <Property Name="GroupID" Type="int4" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="GroupName" Type="varchar" Nullable="false" MaxLength="40" />
+          <Property Name="CreatedBy" Type="int4" />
+          <Property Name="CreatedTimeStamp" Type="timestamp" />
+          <Property Name="ModifiedBy" Type="int4" />
+          <Property Name="ModifiedTimeStamp" Type="timestamp" />
+          <Property Name="Status" Type="bpchar" />
+        </EntityType>
+        <EntityType Name="MasterMenu">
+          <Key>
+            <PropertyRef Name="MenuID" />
+          </Key>
+          <Property Name="MenuID" Type="int4" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="MenuName" Type="varchar" Nullable="false" MaxLength="40" />
+          <Property Name="MenuOrder" Type="int4" Nullable="false" />
+          <Property Name="MenuIcon" Type="bpchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="MasterPage">
+          <Key>
+            <PropertyRef Name="PageID" />
+          </Key>
+          <Property Name="PageID" Type="int4" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="PageName" Type="varchar" Nullable="false" MaxLength="40" />
+          <Property Name="PagePath" Type="varchar" Nullable="false" MaxLength="200" />
+          <Property Name="PageOrder" Type="int4" Nullable="false" />
+          <Property Name="ParentPageID" Type="int4" />
+          <Property Name="MenuID" Type="int4" />
+        </EntityType>
+        <EntityType Name="MasterRole">
+          <Key>
+            <PropertyRef Name="RoleID" />
+          </Key>
+          <Property Name="RoleID" Type="int4" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="RoleName" Type="varchar" Nullable="false" MaxLength="40" />
+        </EntityType>
+        <EntityType Name="MasterUser">
+          <Key>
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="UserID" Type="int4" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="UserName" Type="varchar" Nullable="false" MaxLength="40" />
+          <Property Name="Passcode" Type="varchar" Nullable="false" MaxLength="200" />
+          <Property Name="GroupID" Type="int4" Nullable="false" />
+          <Property Name="UserEmail" Type="bpchar" MaxLength="100" />
+          <Property Name="SecQuestion" Type="bpchar" MaxLength="250" />
+          <Property Name="SecAnswer" Type="bpchar" MaxLength="250" />
+          <Property Name="CreatedBy" Type="int4" />
+          <Property Name="CreatedTimeStamp" Type="timestamp" />
+          <Property Name="ModifiedBy" Type="int4" />
+          <Property Name="ModifiedTimeStamp" Type="timestamp" />
+          <Property Name="ICNO" Type="bpchar" MaxLength="30" />
+          <Property Name="Title" Type="bpchar" MaxLength="15" />
+          <Property Name="FullName" Type="bpchar" MaxLength="100" />
+          <Property Name="PositionGrade" Type="bpchar" MaxLength="100" />
+          <Property Name="PhoneNO" Type="bpchar" MaxLength="50" />
+          <Property Name="Fax" Type="bpchar" MaxLength="50" />
+          <Property Name="Designation" Type="bpchar" MaxLength="50" />
+          <Property Name="Department" Type="bpchar" MaxLength="50" />
+          <Property Name="PeriodOfService" Type="bpchar" MaxLength="50" />
+          <Property Name="OfficeAddress" Type="bpchar" MaxLength="250" />
+          <Property Name="Status" Type="bpchar" />
+          <Property Name="Language" Type="bpchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="PeriodMengurus">
+          <Key>
+            <PropertyRef Name="PeriodMengurusID" />
+          </Key>
+          <Property Name="PeriodMengurusID" Type="int4" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="FieldMengurusID" Type="int4" Nullable="false" />
+          <Property Name="MengurusYear" Type="int4" Nullable="false" />
+          <Property Name="Status" Type="bpchar" Nullable="false" />
+          <Property Name="CreatedBy" Type="int4" />
+          <Property Name="CreatedTimeStamp" Type="timestamp" />
+          <Property Name="ModifiedBy" Type="int4" />
+          <Property Name="ModifiedTimeStamp" Type="timestamp" />
+        </EntityType>
+        <EntityType Name="PeriodPerjawatan">
+          <Key>
+            <PropertyRef Name="PeriodPerjawatanID" />
+          </Key>
+          <Property Name="PeriodPerjawatanID" Type="int4" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="FieldPerjawatanID" Type="int4" Nullable="false" />
+          <Property Name="PerjawatanYear" Type="int4" Nullable="false" />
+          <Property Name="Status" Type="bpchar" Nullable="false" />
+          <Property Name="CreatedBy" Type="int4" />
+          <Property Name="CreatedTimeStamp" Type="timestamp" />
+          <Property Name="ModifiedBy" Type="int4" />
+          <Property Name="ModifiedTimeStamp" Type="timestamp" />
+        </EntityType>
+        <EntityType Name="Segment">
+          <Key>
+            <PropertyRef Name="SegmentID" />
+          </Key>
+          <Property Name="SegmentID" Type="int4" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="SegmentName" Type="varchar" Nullable="false" MaxLength="40" />
+          <Property Name="SegmentOrder" Type="int4" />
+          <Property Name="ShapeFormat" Type="varchar" Nullable="false" MaxLength="15" />
+          <Property Name="Status" Type="bpchar" Nullable="false" />
+          <Property Name="CreatedBy" Type="int4" />
+          <Property Name="CreatedTimeStamp" Type="timestamp" />
+          <Property Name="ModifiedBy" Type="int4" />
+          <Property Name="ModifiedTimeStamp" Type="timestamp" />
+        </EntityType>
+        <EntityType Name="SegmentDetail">
+          <Key>
+            <PropertyRef Name="SegmentDetailID" />
+          </Key>
+          <Property Name="SegmentDetailID" Type="int4" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="SegmentID" Type="int4" />
+          <Property Name="DetailCode" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="DetailDesc" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="ParentDetailID" Type="int4" />
+          <Property Name="Status" Type="bpchar" Nullable="false" />
+          <Property Name="CreatedBy" Type="int4" />
+          <Property Name="CreatedTimeStamp" Type="timestamp" />
+          <Property Name="ModifiedBy" Type="int4" />
+          <Property Name="ModifiedTimeStamp" Type="timestamp" />
+        </EntityType>
+        <EntityType Name="UserMengurusWorkflow">
+          <Key>
+            <PropertyRef Name="UserMengurusWorkflowID" />
+          </Key>
+          <Property Name="UserMengurusWorkflowID" Type="int4" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="UserID" Type="int4" />
+          <Property Name="AccountCode" Type="varchar" MaxLength="20" />
+          <Property Name="Status" Type="bpchar" />
+        </EntityType>
+        <EntityType Name="UserPerjawatanWorkflow">
+          <Key>
+            <PropertyRef Name="UserPerjawatanWorkflowID" />
+          </Key>
+          <Property Name="UserPerjawatanWorkflowID" Type="int4" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="UserID" Type="int4" />
+          <Property Name="GroupPerjawatanCode" Type="varchar" MaxLength="20" />
+          <Property Name="Status" Type="bpchar" />
+        </EntityType>
+        <EntityType Name="UserSegDtlWorkflow">
+          <Key>
+            <PropertyRef Name="UserSegDtlWorkflowID" />
+          </Key>
+          <Property Name="UserSegDtlWorkflowID" Type="int4" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="UserID" Type="int4" />
+          <Property Name="SegmentDetailID" Type="int4" />
+          <Property Name="Status" Type="bpchar" />
+        </EntityType>
+        <EntityType Name="YearEnd">
+          <Key>
+            <PropertyRef Name="YearEndID" />
+          </Key>
+          <Property Name="YearEndID" Type="int4" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="BudgetType" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="BudgetYear" Type="int4" Nullable="false" />
+          <Property Name="Status" Type="bpchar" Nullable="false" />
+          <Property Name="CreatedBy" Type="int4" />
+          <Property Name="CreatedTimeStamp" Type="timestamp" />
+          <Property Name="ModifiedBy" Type="int4" />
+          <Property Name="ModifiedTimeStamp" Type="timestamp" />
+        </EntityType>
+        <EntityType Name="YearUploadSetup">
+          <Key>
+            <PropertyRef Name="BudgetYearID" />
+          </Key>
+          <Property Name="BudgetYear" Type="int4" />
+          <Property Name="BudgetYearDesc" Type="varchar" />
+          <Property Name="Status" Type="bpchar" />
+          <Property Name="CreatedBy" Type="int4" />
+          <Property Name="CreatedTimeStamp" Type="timestamp" />
+          <Property Name="ModifiedBy" Type="int4" />
+          <Property Name="ModifiedTimeStamp" Type="timestamp" />
+          <Property Name="BudgetYearID" Type="int4" Nullable="false" StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <Association Name="BudgetMengurus_AccountCode">
+          <End Role="AccountCode" Type="OBModel.Store.AccountCode" Multiplicity="1" />
+          <End Role="BudgetMengurus" Type="OBModel.Store.BudgetMengurus" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AccountCode">
+              <PropertyRef Name="AccountCode" />
+            </Principal>
+            <Dependent Role="BudgetMengurus">
+              <PropertyRef Name="AccountCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="BudgetMengurus_PeriodMengurus">
+          <End Role="PeriodMengurus" Type="OBModel.Store.PeriodMengurus" Multiplicity="1" />
+          <End Role="BudgetMengurus" Type="OBModel.Store.BudgetMengurus" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PeriodMengurus">
+              <PropertyRef Name="PeriodMengurusID" />
+            </Principal>
+            <Dependent Role="BudgetMengurus">
+              <PropertyRef Name="PeriodMengurusID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="BudgetPerjawatan_GroupPerjawatan">
+          <End Role="GroupPerjawatan" Type="OBModel.Store.GroupPerjawatan" Multiplicity="1" />
+          <End Role="BudgetPerjawatan" Type="OBModel.Store.BudgetPerjawatan" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GroupPerjawatan">
+              <PropertyRef Name="GroupPerjawatanCode" />
+            </Principal>
+            <Dependent Role="BudgetPerjawatan">
+              <PropertyRef Name="GroupPerjawatanCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="BudgetPerjawatan_PeriodPerjawatan">
+          <End Role="PeriodPerjawatan" Type="OBModel.Store.PeriodPerjawatan" Multiplicity="1" />
+          <End Role="BudgetPerjawatan" Type="OBModel.Store.BudgetPerjawatan" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PeriodPerjawatan">
+              <PropertyRef Name="PeriodPerjawatanID" />
+            </Principal>
+            <Dependent Role="BudgetPerjawatan">
+              <PropertyRef Name="PeriodPerjawatanID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="BudgetProjek_AccountCode">
+          <End Role="AccountCode" Type="OBModel.Store.AccountCode" Multiplicity="1" />
+          <End Role="BudgetProjek" Type="OBModel.Store.BudgetProjek" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AccountCode">
+              <PropertyRef Name="AccountCode" />
+            </Principal>
+            <Dependent Role="BudgetProjek">
+              <PropertyRef Name="AccountCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="BudgetProjek_PeriodMengurus">
+          <End Role="PeriodMengurus" Type="OBModel.Store.PeriodMengurus" Multiplicity="1" />
+          <End Role="BudgetProjek" Type="OBModel.Store.BudgetProjek" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PeriodMengurus">
+              <PropertyRef Name="PeriodMengurusID" />
+            </Principal>
+            <Dependent Role="BudgetProjek">
+              <PropertyRef Name="PeriodMengurusID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="JuncBgtMengurusSegDtl_BudgetMengurus">
+          <End Role="BudgetMengurus" Type="OBModel.Store.BudgetMengurus" Multiplicity="1" />
+          <End Role="JuncBgtMengurusSegDtl" Type="OBModel.Store.JuncBgtMengurusSegDtl" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BudgetMengurus">
+              <PropertyRef Name="BudgetMengurusID" />
+            </Principal>
+            <Dependent Role="JuncBgtMengurusSegDtl">
+              <PropertyRef Name="BudgetMengurusID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="JuncBgtMengurusSegDtl_SegmentDetail">
+          <End Role="SegmentDetail" Type="OBModel.Store.SegmentDetail" Multiplicity="1" />
+          <End Role="JuncBgtMengurusSegDtl" Type="OBModel.Store.JuncBgtMengurusSegDtl" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SegmentDetail">
+              <PropertyRef Name="SegmentDetailID" />
+            </Principal>
+            <Dependent Role="JuncBgtMengurusSegDtl">
+              <PropertyRef Name="SegmentDetailID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="JuncBgtPerjawatanSegDtl_BudgetPerjawatan">
+          <End Role="BudgetPerjawatan" Type="OBModel.Store.BudgetPerjawatan" Multiplicity="1" />
+          <End Role="JuncBgtPerjawatanSegDtl" Type="OBModel.Store.JuncBgtPerjawatanSegDtl" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BudgetPerjawatan">
+              <PropertyRef Name="BudgetPerjawatanID" />
+            </Principal>
+            <Dependent Role="JuncBgtPerjawatanSegDtl">
+              <PropertyRef Name="BudgetPerjawatanID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="JuncBgtPerjawatanSegDtl_SegmentDetail">
+          <End Role="SegmentDetail" Type="OBModel.Store.SegmentDetail" Multiplicity="1" />
+          <End Role="JuncBgtPerjawatanSegDtl" Type="OBModel.Store.JuncBgtPerjawatanSegDtl" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SegmentDetail">
+              <PropertyRef Name="SegmentDetailID" />
+            </Principal>
+            <Dependent Role="JuncBgtPerjawatanSegDtl">
+              <PropertyRef Name="SegmentDetailID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="JuncBgtProjekSegDtl_BudgetProjek">
+          <End Role="BudgetProjek" Type="OBModel.Store.BudgetProjek" Multiplicity="1" />
+          <End Role="JuncBgtProjekSegDtl" Type="OBModel.Store.JuncBgtProjekSegDtl" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BudgetProjek">
+              <PropertyRef Name="BudgetProjekID" />
+            </Principal>
+            <Dependent Role="JuncBgtProjekSegDtl">
+              <PropertyRef Name="BudgetProjekID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="JuncBgtProjekSegDtl_SegmentDetail">
+          <End Role="SegmentDetail" Type="OBModel.Store.SegmentDetail" Multiplicity="1" />
+          <End Role="JuncBgtProjekSegDtl" Type="OBModel.Store.JuncBgtProjekSegDtl" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SegmentDetail">
+              <PropertyRef Name="SegmentDetailID" />
+            </Principal>
+            <Dependent Role="JuncBgtProjekSegDtl">
+              <PropertyRef Name="SegmentDetailID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="JuncRolePage_Page">
+          <End Role="MasterPage" Type="OBModel.Store.MasterPage" Multiplicity="0..1" />
+          <End Role="JuncRolePage" Type="OBModel.Store.JuncRolePage" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MasterPage">
+              <PropertyRef Name="PageID" />
+            </Principal>
+            <Dependent Role="JuncRolePage">
+              <PropertyRef Name="PageID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="JuncRolePage_Role">
+          <End Role="MasterRole" Type="OBModel.Store.MasterRole" Multiplicity="0..1" />
+          <End Role="JuncRolePage" Type="OBModel.Store.JuncRolePage" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MasterRole">
+              <PropertyRef Name="RoleID" />
+            </Principal>
+            <Dependent Role="JuncRolePage">
+              <PropertyRef Name="RoleID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="JuncUserRole_Role">
+          <End Role="MasterRole" Type="OBModel.Store.MasterRole" Multiplicity="0..1" />
+          <End Role="JuncUserRole" Type="OBModel.Store.JuncUserRole" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MasterRole">
+              <PropertyRef Name="RoleID" />
+            </Principal>
+            <Dependent Role="JuncUserRole">
+              <PropertyRef Name="RoleID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="JuncUserRole_User">
+          <End Role="MasterUser" Type="OBModel.Store.MasterUser" Multiplicity="0..1" />
+          <End Role="JuncUserRole" Type="OBModel.Store.JuncUserRole" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MasterUser">
+              <PropertyRef Name="UserID" />
+            </Principal>
+            <Dependent Role="JuncUserRole">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Menu_Page">
+          <End Role="MasterMenu" Type="OBModel.Store.MasterMenu" Multiplicity="0..1" />
+          <End Role="MasterPage" Type="OBModel.Store.MasterPage" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MasterMenu">
+              <PropertyRef Name="MenuID" />
+            </Principal>
+            <Dependent Role="MasterPage">
+              <PropertyRef Name="MenuID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="PeriodMengurus_FieldPerjawatan">
+          <End Role="FieldMengurus" Type="OBModel.Store.FieldMengurus" Multiplicity="1" />
+          <End Role="PeriodMengurus" Type="OBModel.Store.PeriodMengurus" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FieldMengurus">
+              <PropertyRef Name="FieldMengurusID" />
+            </Principal>
+            <Dependent Role="PeriodMengurus">
+              <PropertyRef Name="FieldMengurusID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="PeriodPerjawatan_FieldPerjawatan">
+          <End Role="FieldPerjawatan" Type="OBModel.Store.FieldPerjawatan" Multiplicity="1" />
+          <End Role="PeriodPerjawatan" Type="OBModel.Store.PeriodPerjawatan" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FieldPerjawatan">
+              <PropertyRef Name="FieldPerjawatanID" />
+            </Principal>
+            <Dependent Role="PeriodPerjawatan">
+              <PropertyRef Name="FieldPerjawatanID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="SegmentDetail_Segment">
+          <End Role="Segment" Type="OBModel.Store.Segment" Multiplicity="0..1" />
+          <End Role="SegmentDetail" Type="OBModel.Store.SegmentDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Segment">
+              <PropertyRef Name="SegmentID" />
+            </Principal>
+            <Dependent Role="SegmentDetail">
+              <PropertyRef Name="SegmentID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="UserGroup">
+          <End Role="MasterGroup" Type="OBModel.Store.MasterGroup" Multiplicity="1" />
+          <End Role="MasterUser" Type="OBModel.Store.MasterUser" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MasterGroup">
+              <PropertyRef Name="GroupID" />
+            </Principal>
+            <Dependent Role="MasterUser">
+              <PropertyRef Name="GroupID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="UserPerjawatanWorkflow_AccountCode">
+          <End Role="GroupPerjawatan" Type="OBModel.Store.GroupPerjawatan" Multiplicity="0..1" />
+          <End Role="UserPerjawatanWorkflow" Type="OBModel.Store.UserPerjawatanWorkflow" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GroupPerjawatan">
+              <PropertyRef Name="GroupPerjawatanCode" />
+            </Principal>
+            <Dependent Role="UserPerjawatanWorkflow">
+              <PropertyRef Name="GroupPerjawatanCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="UserPerjawatanWorkflow_User">
+          <End Role="MasterUser" Type="OBModel.Store.MasterUser" Multiplicity="0..1" />
+          <End Role="UserPerjawatanWorkflow" Type="OBModel.Store.UserPerjawatanWorkflow" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MasterUser">
+              <PropertyRef Name="UserID" />
+            </Principal>
+            <Dependent Role="UserPerjawatanWorkflow">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="UserSegDtlWorkflow_SegDtls">
+          <End Role="SegmentDetail" Type="OBModel.Store.SegmentDetail" Multiplicity="0..1" />
+          <End Role="UserSegDtlWorkflow" Type="OBModel.Store.UserSegDtlWorkflow" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SegmentDetail">
+              <PropertyRef Name="SegmentDetailID" />
+            </Principal>
+            <Dependent Role="UserSegDtlWorkflow">
+              <PropertyRef Name="SegmentDetailID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="UserSegDtlWorkflow_User">
+          <End Role="MasterUser" Type="OBModel.Store.MasterUser" Multiplicity="0..1" />
+          <End Role="UserSegDtlWorkflow" Type="OBModel.Store.UserSegDtlWorkflow" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MasterUser">
+              <PropertyRef Name="UserID" />
+            </Principal>
+            <Dependent Role="UserSegDtlWorkflow">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="UserWorkflow_AccountCode">
+          <End Role="AccountCode" Type="OBModel.Store.AccountCode" Multiplicity="0..1" />
+          <End Role="UserMengurusWorkflow" Type="OBModel.Store.UserMengurusWorkflow" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AccountCode">
+              <PropertyRef Name="AccountCode" />
+            </Principal>
+            <Dependent Role="UserMengurusWorkflow">
+              <PropertyRef Name="AccountCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="UserWorkflow_User">
+          <End Role="MasterUser" Type="OBModel.Store.MasterUser" Multiplicity="0..1" />
+          <End Role="UserMengurusWorkflow" Type="OBModel.Store.UserMengurusWorkflow" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MasterUser">
+              <PropertyRef Name="UserID" />
+            </Principal>
+            <Dependent Role="UserMengurusWorkflow">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="OBModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="OBEntities" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="BudgetMengurus" EntityType="OBModel.BudgetMenguru" />
+          <EntitySet Name="BudgetPerjawatans" EntityType="OBModel.BudgetPerjawatan" />
+          <EntitySet Name="FieldMengurus" EntityType="OBModel.FieldMenguru" />
+          <EntitySet Name="FieldPerjawatans" EntityType="OBModel.FieldPerjawatan" />
+          <EntitySet Name="GroupPerjawatans" EntityType="OBModel.GroupPerjawatan" />
+          <EntitySet Name="JuncBgtMengurusSegDtls" EntityType="OBModel.JuncBgtMengurusSegDtl" />
+          <EntitySet Name="JuncBgtPerjawatanSegDtls" EntityType="OBModel.JuncBgtPerjawatanSegDtl" />
+          <EntitySet Name="JuncRolePages" EntityType="OBModel.JuncRolePage" />
+          <EntitySet Name="JuncUserRoles" EntityType="OBModel.JuncUserRole" />
+          <EntitySet Name="MasterMenus" EntityType="OBModel.MasterMenu" />
+          <EntitySet Name="MasterPages" EntityType="OBModel.MasterPage" />
+          <EntitySet Name="MasterRoles" EntityType="OBModel.MasterRole" />
+          <EntitySet Name="PeriodMengurus" EntityType="OBModel.PeriodMenguru" />
+          <EntitySet Name="PeriodPerjawatans" EntityType="OBModel.PeriodPerjawatan" />
+          <EntitySet Name="Segments" EntityType="OBModel.Segment" />
+          <EntitySet Name="SegmentDetails" EntityType="OBModel.SegmentDetail" />
+          <AssociationSet Name="BudgetMengurus_PeriodMengurus" Association="OBModel.BudgetMengurus_PeriodMengurus">
+            <End Role="PeriodMenguru" EntitySet="PeriodMengurus" />
+            <End Role="BudgetMenguru" EntitySet="BudgetMengurus" />
+          </AssociationSet>
+          <AssociationSet Name="JuncBgtMengurusSegDtl_BudgetMengurus" Association="OBModel.JuncBgtMengurusSegDtl_BudgetMengurus">
+            <End Role="BudgetMenguru" EntitySet="BudgetMengurus" />
+            <End Role="JuncBgtMengurusSegDtl" EntitySet="JuncBgtMengurusSegDtls" />
+          </AssociationSet>
+          <AssociationSet Name="BudgetPerjawatan_GroupPerjawatan" Association="OBModel.BudgetPerjawatan_GroupPerjawatan">
+            <End Role="GroupPerjawatan" EntitySet="GroupPerjawatans" />
+            <End Role="BudgetPerjawatan" EntitySet="BudgetPerjawatans" />
+          </AssociationSet>
+          <AssociationSet Name="BudgetPerjawatan_PeriodPerjawatan" Association="OBModel.BudgetPerjawatan_PeriodPerjawatan">
+            <End Role="PeriodPerjawatan" EntitySet="PeriodPerjawatans" />
+            <End Role="BudgetPerjawatan" EntitySet="BudgetPerjawatans" />
+          </AssociationSet>
+          <AssociationSet Name="JuncBgtPerjawatanSegDtl_BudgetPerjawatan" Association="OBModel.JuncBgtPerjawatanSegDtl_BudgetPerjawatan">
+            <End Role="BudgetPerjawatan" EntitySet="BudgetPerjawatans" />
+            <End Role="JuncBgtPerjawatanSegDtl" EntitySet="JuncBgtPerjawatanSegDtls" />
+          </AssociationSet>
+          <AssociationSet Name="PeriodMengurus_FieldPerjawatan" Association="OBModel.PeriodMengurus_FieldPerjawatan">
+            <End Role="FieldMenguru" EntitySet="FieldMengurus" />
+            <End Role="PeriodMenguru" EntitySet="PeriodMengurus" />
+          </AssociationSet>
+          <AssociationSet Name="PeriodPerjawatan_FieldPerjawatan" Association="OBModel.PeriodPerjawatan_FieldPerjawatan">
+            <End Role="FieldPerjawatan" EntitySet="FieldPerjawatans" />
+            <End Role="PeriodPerjawatan" EntitySet="PeriodPerjawatans" />
+          </AssociationSet>
+          <AssociationSet Name="JuncBgtMengurusSegDtl_SegmentDetail" Association="OBModel.JuncBgtMengurusSegDtl_SegmentDetail">
+            <End Role="SegmentDetail" EntitySet="SegmentDetails" />
+            <End Role="JuncBgtMengurusSegDtl" EntitySet="JuncBgtMengurusSegDtls" />
+          </AssociationSet>
+          <AssociationSet Name="JuncBgtPerjawatanSegDtl_SegmentDetail" Association="OBModel.JuncBgtPerjawatanSegDtl_SegmentDetail">
+            <End Role="SegmentDetail" EntitySet="SegmentDetails" />
+            <End Role="JuncBgtPerjawatanSegDtl" EntitySet="JuncBgtPerjawatanSegDtls" />
+          </AssociationSet>
+          <AssociationSet Name="JuncRolePage_Page" Association="OBModel.JuncRolePage_Page">
+            <End Role="MasterPage" EntitySet="MasterPages" />
+            <End Role="JuncRolePage" EntitySet="JuncRolePages" />
+          </AssociationSet>
+          <AssociationSet Name="JuncRolePage_Role" Association="OBModel.JuncRolePage_Role">
+            <End Role="MasterRole" EntitySet="MasterRoles" />
+            <End Role="JuncRolePage" EntitySet="JuncRolePages" />
+          </AssociationSet>
+          <AssociationSet Name="JuncUserRole_Role" Association="OBModel.JuncUserRole_Role">
+            <End Role="MasterRole" EntitySet="MasterRoles" />
+            <End Role="JuncUserRole" EntitySet="JuncUserRoles" />
+          </AssociationSet>
+          <AssociationSet Name="Menu_Page" Association="OBModel.Menu_Page">
+            <End Role="MasterMenu" EntitySet="MasterMenus" />
+            <End Role="MasterPage" EntitySet="MasterPages" />
+          </AssociationSet>
+          <AssociationSet Name="Role_Role" Association="OBModel.Role_Role">
+            <End Role="MasterRole" EntitySet="MasterRoles" />
+            <End Role="MasterPage" EntitySet="MasterPages" />
+          </AssociationSet>
+          <AssociationSet Name="SegmentDetail_Segment" Association="OBModel.SegmentDetail_Segment">
+            <End Role="Segment" EntitySet="Segments" />
+            <End Role="SegmentDetail" EntitySet="SegmentDetails" />
+          </AssociationSet>
+          <EntitySet Name="UserMengurusWorkflows" EntityType="OBModel.UserMengurusWorkflow" />
+          <EntitySet Name="UserPerjawatanWorkflows" EntityType="OBModel.UserPerjawatanWorkflow" />
+          <AssociationSet Name="UserPerjawatanWorkflow_AccountCode" Association="OBModel.UserPerjawatanWorkflow_AccountCode">
+            <End Role="GroupPerjawatan" EntitySet="GroupPerjawatans" />
+            <End Role="UserPerjawatanWorkflow" EntitySet="UserPerjawatanWorkflows" />
+          </AssociationSet>
+          <EntitySet Name="AccountCodes" EntityType="OBModel.AccountCode" />
+          <AssociationSet Name="BudgetMengurus_AccountCode" Association="OBModel.BudgetMengurus_AccountCode">
+            <End Role="AccountCode" EntitySet="AccountCodes" />
+            <End Role="BudgetMenguru" EntitySet="BudgetMengurus" />
+          </AssociationSet>
+          <AssociationSet Name="UserWorkflow_AccountCode" Association="OBModel.UserWorkflow_AccountCode">
+            <End Role="AccountCode" EntitySet="AccountCodes" />
+            <End Role="UserMengurusWorkflow" EntitySet="UserMengurusWorkflows" />
+          </AssociationSet>
+          <EntitySet Name="MasterGroups" EntityType="OBModel.MasterGroup" />
+          <EntitySet Name="BPEventLogs" EntityType="OBModel.BPEventLog" />
+          <EntitySet Name="YearEnds" EntityType="OBModel.YearEnd" />
+          <EntitySet Name="UserSegDtlWorkflows" EntityType="OBModel.UserSegDtlWorkflow" />
+          <AssociationSet Name="UserSegDtlWorkflow_SegDtls" Association="OBModel.UserSegDtlWorkflow_SegDtls">
+            <End Role="SegmentDetail" EntitySet="SegmentDetails" />
+            <End Role="UserSegDtlWorkflow" EntitySet="UserSegDtlWorkflows" />
+          </AssociationSet>
+          <EntitySet Name="BPLanguages" EntityType="OBModel.BPLanguage" />
+          <EntitySet Name="MasterUsers" EntityType="OBModel.MasterUser" />
+          <AssociationSet Name="JuncUserRole_User" Association="OBModel.JuncUserRole_User">
+            <End Role="MasterUser" EntitySet="MasterUsers" />
+            <End Role="JuncUserRole" EntitySet="JuncUserRoles" />
+          </AssociationSet>
+          <AssociationSet Name="UserGroup" Association="OBModel.UserGroup">
+            <End Role="MasterGroup" EntitySet="MasterGroups" />
+            <End Role="MasterUser" EntitySet="MasterUsers" />
+          </AssociationSet>
+          <AssociationSet Name="UserPerjawatanWorkflow_User" Association="OBModel.UserPerjawatanWorkflow_User">
+            <End Role="MasterUser" EntitySet="MasterUsers" />
+            <End Role="UserPerjawatanWorkflow" EntitySet="UserPerjawatanWorkflows" />
+          </AssociationSet>
+          <AssociationSet Name="UserSegDtlWorkflow_User" Association="OBModel.UserSegDtlWorkflow_User">
+            <End Role="MasterUser" EntitySet="MasterUsers" />
+            <End Role="UserSegDtlWorkflow" EntitySet="UserSegDtlWorkflows" />
+          </AssociationSet>
+          <AssociationSet Name="UserWorkflow_User" Association="OBModel.UserWorkflow_User">
+            <End Role="MasterUser" EntitySet="MasterUsers" />
+            <End Role="UserMengurusWorkflow" EntitySet="UserMengurusWorkflows" />
+          </AssociationSet>
+          <EntitySet Name="YearUploadSetups" EntityType="OBModel.YearUploadSetup" />
+          <EntitySet Name="BudgetProjeks" EntityType="OBModel.BudgetProjek" />
+          <EntitySet Name="JuncBgtProjekSegDtls" EntityType="OBModel.JuncBgtProjekSegDtl" />
+          <AssociationSet Name="BudgetProjek_AccountCode" Association="OBModel.BudgetProjek_AccountCode">
+            <End Role="AccountCode" EntitySet="AccountCodes" />
+            <End Role="BudgetProjek" EntitySet="BudgetProjeks" />
+          </AssociationSet>
+          <AssociationSet Name="BudgetProjek_PeriodMengurus" Association="OBModel.BudgetProjek_PeriodMengurus">
+            <End Role="PeriodMenguru" EntitySet="PeriodMengurus" />
+            <End Role="BudgetProjek" EntitySet="BudgetProjeks" />
+          </AssociationSet>
+          <AssociationSet Name="JuncBgtProjekSegDtl_BudgetProjek" Association="OBModel.JuncBgtProjekSegDtl_BudgetProjek">
+            <End Role="BudgetProjek" EntitySet="BudgetProjeks" />
+            <End Role="JuncBgtProjekSegDtl" EntitySet="JuncBgtProjekSegDtls" />
+          </AssociationSet>
+          <AssociationSet Name="JuncBgtProjekSegDtl_SegmentDetail" Association="OBModel.JuncBgtProjekSegDtl_SegmentDetail">
+            <End Role="SegmentDetail" EntitySet="SegmentDetails" />
+            <End Role="JuncBgtProjekSegDtl" EntitySet="JuncBgtProjekSegDtls" />
+          </AssociationSet>
+          </EntityContainer>
+        <EntityType Name="BudgetMenguru">
+          <Key>
+            <PropertyRef Name="BudgetMengurusID" />
+          </Key>
+          <Property Type="Int32" Name="BudgetMengurusID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="PeriodMengurusID" Nullable="false" />
+          <Property Type="String" Name="AccountCode" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="Decimal" Name="Amount" Nullable="false" Precision="16" Scale="2" />
+          <Property Type="String" Name="Status" Nullable="false" MaxLength="1" FixedLength="true" Unicode="true" />
+          <Property Type="String" Name="Remarks" MaxLength="500" FixedLength="true" Unicode="true" />
+          <Property Type="Int32" Name="CreatedBy" />
+          <Property Type="DateTime" Name="CreatedTimeStamp" Precision="6" />
+          <Property Type="Int32" Name="ModifiedBy" />
+          <Property Type="DateTime" Name="ModifiedTimeStamp" Precision="6" />
+          <NavigationProperty Name="PeriodMenguru" Relationship="OBModel.BudgetMengurus_PeriodMengurus" FromRole="BudgetMenguru" ToRole="PeriodMenguru" />
+          <NavigationProperty Name="JuncBgtMengurusSegDtls" Relationship="OBModel.JuncBgtMengurusSegDtl_BudgetMengurus" FromRole="BudgetMenguru" ToRole="JuncBgtMengurusSegDtl" />
+          <NavigationProperty Name="AccountCode1" Relationship="OBModel.BudgetMengurus_AccountCode" FromRole="BudgetMenguru" ToRole="AccountCode" />
+        </EntityType>
+        <EntityType Name="BudgetPerjawatan">
+          <Key>
+            <PropertyRef Name="BudgetPerjawatanID" />
+          </Key>
+          <Property Type="Int32" Name="BudgetPerjawatanID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="PeriodPerjawatanID" Nullable="false" />
+          <Property Type="String" Name="GroupPerjawatanCode" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="Decimal" Name="Amount" Nullable="false" Precision="16" Scale="2" />
+          <Property Type="String" Name="Status" Nullable="false" MaxLength="1" FixedLength="true" Unicode="true" />
+          <Property Type="String" Name="Remarks" MaxLength="500" FixedLength="true" Unicode="true" />
+          <Property Type="Int32" Name="CreatedBy" />
+          <Property Type="DateTime" Name="CreatedTimeStamp" Precision="6" />
+          <Property Type="Int32" Name="ModifiedBy" />
+          <Property Type="DateTime" Name="ModifiedTimeStamp" Precision="6" />
+          <NavigationProperty Name="GroupPerjawatan" Relationship="OBModel.BudgetPerjawatan_GroupPerjawatan" FromRole="BudgetPerjawatan" ToRole="GroupPerjawatan" />
+          <NavigationProperty Name="PeriodPerjawatan" Relationship="OBModel.BudgetPerjawatan_PeriodPerjawatan" FromRole="BudgetPerjawatan" ToRole="PeriodPerjawatan" />
+          <NavigationProperty Name="JuncBgtPerjawatanSegDtls" Relationship="OBModel.JuncBgtPerjawatanSegDtl_BudgetPerjawatan" FromRole="BudgetPerjawatan" ToRole="JuncBgtPerjawatanSegDtl" />
+        </EntityType>
+        <EntityType Name="FieldMenguru">
+          <Key>
+            <PropertyRef Name="FieldMengurusID" />
+          </Key>
+          <Property Type="Int32" Name="FieldMengurusID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="FieldMengurusSDesc" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FieldMengurusDesc" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Status" Nullable="false" MaxLength="1" FixedLength="true" Unicode="true" />
+          <Property Type="Int32" Name="CreatedBy" />
+          <Property Type="DateTime" Name="CreatedTimeStamp" Precision="6" />
+          <Property Type="Int32" Name="ModifiedBy" />
+          <Property Type="DateTime" Name="ModifiedTimeStamp" Precision="6" />
+          <NavigationProperty Name="PeriodMengurus" Relationship="OBModel.PeriodMengurus_FieldPerjawatan" FromRole="FieldMenguru" ToRole="PeriodMenguru" />
+        </EntityType>
+        <EntityType Name="FieldPerjawatan">
+          <Key>
+            <PropertyRef Name="FieldPerjawatanID" />
+          </Key>
+          <Property Type="Int32" Name="FieldPerjawatanID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="FieldPerjawatanSDesc" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FieldPerjawatanDesc" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Status" Nullable="false" MaxLength="1" FixedLength="true" Unicode="true" />
+          <Property Type="Int32" Name="CreatedBy" />
+          <Property Type="DateTime" Name="CreatedTimeStamp" Precision="6" />
+          <Property Type="Int32" Name="ModifiedBy" />
+          <Property Type="DateTime" Name="ModifiedTimeStamp" Precision="6" />
+          <NavigationProperty Name="PeriodPerjawatans" Relationship="OBModel.PeriodPerjawatan_FieldPerjawatan" FromRole="FieldPerjawatan" ToRole="PeriodPerjawatan" />
+        </EntityType>
+        <EntityType Name="GroupPerjawatan">
+          <Key>
+            <PropertyRef Name="GroupPerjawatanCode" />
+          </Key>
+          <Property Type="String" Name="GroupPerjawatanCode" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="GroupPerjawatanDesc" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ParentGroupPerjawatanID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Status" Nullable="false" MaxLength="1" FixedLength="true" Unicode="true" />
+          <Property Type="Int32" Name="CreatedBy" />
+          <Property Type="DateTime" Name="CreatedTimeStamp" Precision="6" />
+          <Property Type="Int32" Name="ModifiedBy" />
+          <Property Type="DateTime" Name="ModifiedTimeStamp" Precision="6" />
+          <NavigationProperty Name="BudgetPerjawatans" Relationship="OBModel.BudgetPerjawatan_GroupPerjawatan" FromRole="GroupPerjawatan" ToRole="BudgetPerjawatan" />
+          <NavigationProperty Name="UserPerjawatanWorkflows" Relationship="OBModel.UserPerjawatanWorkflow_AccountCode" FromRole="GroupPerjawatan" ToRole="UserPerjawatanWorkflow" />
+        </EntityType>
+        <EntityType Name="JuncBgtMengurusSegDtl">
+          <Key>
+            <PropertyRef Name="JuncBgtMengurusSegDtlID" />
+          </Key>
+          <Property Type="Int32" Name="JuncBgtMengurusSegDtlID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="BudgetMengurusID" Nullable="false" />
+          <Property Type="Int32" Name="SegmentDetailID" Nullable="false" />
+          <Property Type="Int32" Name="CreatedBy" />
+          <Property Type="DateTime" Name="CreatedTimeStamp" Precision="6" />
+          <Property Type="Int32" Name="ModifiedBy" />
+          <Property Type="DateTime" Name="ModifiedTimeStamp" Precision="6" />
+          <NavigationProperty Name="BudgetMenguru" Relationship="OBModel.JuncBgtMengurusSegDtl_BudgetMengurus" FromRole="JuncBgtMengurusSegDtl" ToRole="BudgetMenguru" />
+          <NavigationProperty Name="SegmentDetail" Relationship="OBModel.JuncBgtMengurusSegDtl_SegmentDetail" FromRole="JuncBgtMengurusSegDtl" ToRole="SegmentDetail" />
+        </EntityType>
+        <EntityType Name="JuncBgtPerjawatanSegDtl">
+          <Key>
+            <PropertyRef Name="JuncBgtPerjawatanSegDtlID" />
+          </Key>
+          <Property Type="Int32" Name="JuncBgtPerjawatanSegDtlID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="BudgetPerjawatanID" Nullable="false" />
+          <Property Type="Int32" Name="SegmentDetailID" Nullable="false" />
+          <Property Type="Int32" Name="CreatedBy" />
+          <Property Type="DateTime" Name="CreatedTimeStamp" Precision="6" />
+          <Property Type="Int32" Name="ModifiedBy" />
+          <Property Type="DateTime" Name="ModifiedTimeStamp" Precision="6" />
+          <NavigationProperty Name="BudgetPerjawatan" Relationship="OBModel.JuncBgtPerjawatanSegDtl_BudgetPerjawatan" FromRole="JuncBgtPerjawatanSegDtl" ToRole="BudgetPerjawatan" />
+          <NavigationProperty Name="SegmentDetail" Relationship="OBModel.JuncBgtPerjawatanSegDtl_SegmentDetail" FromRole="JuncBgtPerjawatanSegDtl" ToRole="SegmentDetail" />
+        </EntityType>
+        <EntityType Name="JuncRolePage">
+          <Key>
+            <PropertyRef Name="JuncRolePageID" />
+          </Key>
+          <Property Type="Int32" Name="JuncRolePageID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="RoleID" />
+          <Property Type="Int32" Name="PageID" />
+          <Property Type="String" Name="Status" MaxLength="1" FixedLength="true" Unicode="true" />
+          <NavigationProperty Name="MasterPage" Relationship="OBModel.JuncRolePage_Page" FromRole="JuncRolePage" ToRole="MasterPage" />
+          <NavigationProperty Name="MasterRole" Relationship="OBModel.JuncRolePage_Role" FromRole="JuncRolePage" ToRole="MasterRole" />
+        </EntityType>
+        <EntityType Name="JuncUserRole">
+          <Key>
+            <PropertyRef Name="JuncUserRoleID" />
+          </Key>
+          <Property Type="Int32" Name="JuncUserRoleID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="UserID" />
+          <Property Type="Int32" Name="RoleID" />
+          <Property Type="String" Name="Status" MaxLength="1" FixedLength="true" Unicode="true" />
+          <NavigationProperty Name="MasterRole" Relationship="OBModel.JuncUserRole_Role" FromRole="JuncUserRole" ToRole="MasterRole" />
+          <NavigationProperty Name="MasterUser" Relationship="OBModel.JuncUserRole_User" FromRole="JuncUserRole" ToRole="MasterUser" />
+        </EntityType>
+        <EntityType Name="MasterMenu">
+          <Key>
+            <PropertyRef Name="MenuID" />
+          </Key>
+          <Property Type="Int32" Name="MenuID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="MenuName" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="MenuOrder" Nullable="false" />
+          <Property Type="String" Name="MenuIcon" MaxLength="100" FixedLength="true" Unicode="true" />
+          <NavigationProperty Name="MasterPages" Relationship="OBModel.Menu_Page" FromRole="MasterMenu" ToRole="MasterPage" />
+        </EntityType>
+        <EntityType Name="MasterPage">
+          <Key>
+            <PropertyRef Name="PageID" />
+          </Key>
+          <Property Type="Int32" Name="PageID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="PageName" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PagePath" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="PageOrder" Nullable="false" />
+          <Property Type="Int32" Name="ParentPageID" />
+          <Property Type="Int32" Name="MenuID" />
+          <NavigationProperty Name="JuncRolePages" Relationship="OBModel.JuncRolePage_Page" FromRole="MasterPage" ToRole="JuncRolePage" />
+          <NavigationProperty Name="MasterMenu" Relationship="OBModel.Menu_Page" FromRole="MasterPage" ToRole="MasterMenu" />
+          <NavigationProperty Name="MasterRole" Relationship="OBModel.Role_Role" FromRole="MasterPage" ToRole="MasterRole" />
+        </EntityType>
+        <EntityType Name="MasterRole">
+          <Key>
+            <PropertyRef Name="RoleID" />
+          </Key>
+          <Property Type="Int32" Name="RoleID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="RoleName" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="JuncRolePages" Relationship="OBModel.JuncRolePage_Role" FromRole="MasterRole" ToRole="JuncRolePage" />
+          <NavigationProperty Name="JuncUserRoles" Relationship="OBModel.JuncUserRole_Role" FromRole="MasterRole" ToRole="JuncUserRole" />
+          <NavigationProperty Name="MasterPages" Relationship="OBModel.Role_Role" FromRole="MasterRole" ToRole="MasterPage" />
+        </EntityType>
+        <EntityType Name="PeriodMenguru">
+          <Key>
+            <PropertyRef Name="PeriodMengurusID" />
+          </Key>
+          <Property Type="Int32" Name="PeriodMengurusID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="FieldMengurusID" Nullable="false" />
+          <Property Type="Int32" Name="MengurusYear" Nullable="false" />
+          <Property Type="String" Name="Status" Nullable="false" MaxLength="1" FixedLength="true" Unicode="true" />
+          <Property Type="Int32" Name="CreatedBy" />
+          <Property Type="DateTime" Name="CreatedTimeStamp" Precision="6" />
+          <Property Type="Int32" Name="ModifiedBy" />
+          <Property Type="DateTime" Name="ModifiedTimeStamp" Precision="6" />
+          <NavigationProperty Name="BudgetMengurus" Relationship="OBModel.BudgetMengurus_PeriodMengurus" FromRole="PeriodMenguru" ToRole="BudgetMenguru" />
+          <NavigationProperty Name="FieldMenguru" Relationship="OBModel.PeriodMengurus_FieldPerjawatan" FromRole="PeriodMenguru" ToRole="FieldMenguru" />
+          <NavigationProperty Name="BudgetProjeks" Relationship="OBModel.BudgetProjek_PeriodMengurus" FromRole="PeriodMenguru" ToRole="BudgetProjek" />
+        </EntityType>
+        <EntityType Name="PeriodPerjawatan">
+          <Key>
+            <PropertyRef Name="PeriodPerjawatanID" />
+          </Key>
+          <Property Type="Int32" Name="PeriodPerjawatanID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="FieldPerjawatanID" Nullable="false" />
+          <Property Type="Int32" Name="PerjawatanYear" Nullable="false" />
+          <Property Type="String" Name="Status" Nullable="false" MaxLength="1" FixedLength="true" Unicode="true" />
+          <Property Type="Int32" Name="CreatedBy" />
+          <Property Type="DateTime" Name="CreatedTimeStamp" Precision="6" />
+          <Property Type="Int32" Name="ModifiedBy" />
+          <Property Type="DateTime" Name="ModifiedTimeStamp" Precision="6" />
+          <NavigationProperty Name="BudgetPerjawatans" Relationship="OBModel.BudgetPerjawatan_PeriodPerjawatan" FromRole="PeriodPerjawatan" ToRole="BudgetPerjawatan" />
+          <NavigationProperty Name="FieldPerjawatan" Relationship="OBModel.PeriodPerjawatan_FieldPerjawatan" FromRole="PeriodPerjawatan" ToRole="FieldPerjawatan" />
+        </EntityType>
+        <EntityType Name="Segment">
+          <Key>
+            <PropertyRef Name="SegmentID" />
+          </Key>
+          <Property Type="Int32" Name="SegmentID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="SegmentName" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="SegmentOrder" />
+          <Property Type="String" Name="ShapeFormat" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Status" Nullable="false" MaxLength="1" FixedLength="true" Unicode="true" />
+          <Property Type="Int32" Name="CreatedBy" />
+          <Property Type="DateTime" Name="CreatedTimeStamp" Precision="6" />
+          <Property Type="Int32" Name="ModifiedBy" />
+          <Property Type="DateTime" Name="ModifiedTimeStamp" Precision="6" />
+          <NavigationProperty Name="SegmentDetails" Relationship="OBModel.SegmentDetail_Segment" FromRole="Segment" ToRole="SegmentDetail" />
+        </EntityType>
+        <EntityType Name="SegmentDetail">
+          <Key>
+            <PropertyRef Name="SegmentDetailID" />
+          </Key>
+          <Property Type="Int32" Name="SegmentDetailID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="SegmentID" />
+          <Property Type="String" Name="DetailCode" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="DetailDesc" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="ParentDetailID" />
+          <Property Type="String" Name="Status" Nullable="false" MaxLength="1" FixedLength="true" Unicode="true" />
+          <Property Type="Int32" Name="CreatedBy" />
+          <Property Type="DateTime" Name="CreatedTimeStamp" Precision="6" />
+          <Property Type="Int32" Name="ModifiedBy" />
+          <Property Type="DateTime" Name="ModifiedTimeStamp" Precision="6" />
+          <NavigationProperty Name="JuncBgtMengurusSegDtls" Relationship="OBModel.JuncBgtMengurusSegDtl_SegmentDetail" FromRole="SegmentDetail" ToRole="JuncBgtMengurusSegDtl" />
+          <NavigationProperty Name="JuncBgtPerjawatanSegDtls" Relationship="OBModel.JuncBgtPerjawatanSegDtl_SegmentDetail" FromRole="SegmentDetail" ToRole="JuncBgtPerjawatanSegDtl" />
+          <NavigationProperty Name="Segment" Relationship="OBModel.SegmentDetail_Segment" FromRole="SegmentDetail" ToRole="Segment" />
+          <NavigationProperty Name="UserSegDtlWorkflows" Relationship="OBModel.UserSegDtlWorkflow_SegDtls" FromRole="SegmentDetail" ToRole="UserSegDtlWorkflow" />
+          <NavigationProperty Name="JuncBgtProjekSegDtls" Relationship="OBModel.JuncBgtProjekSegDtl_SegmentDetail" FromRole="SegmentDetail" ToRole="JuncBgtProjekSegDtl" />
+        </EntityType>
+        <Association Name="BudgetMengurus_PeriodMengurus">
+          <End Type="OBModel.PeriodMenguru" Role="PeriodMenguru" Multiplicity="1" />
+          <End Type="OBModel.BudgetMenguru" Role="BudgetMenguru" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PeriodMenguru">
+              <PropertyRef Name="PeriodMengurusID" />
+            </Principal>
+            <Dependent Role="BudgetMenguru">
+              <PropertyRef Name="PeriodMengurusID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="JuncBgtMengurusSegDtl_BudgetMengurus">
+          <End Type="OBModel.BudgetMenguru" Role="BudgetMenguru" Multiplicity="1" />
+          <End Type="OBModel.JuncBgtMengurusSegDtl" Role="JuncBgtMengurusSegDtl" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BudgetMenguru">
+              <PropertyRef Name="BudgetMengurusID" />
+            </Principal>
+            <Dependent Role="JuncBgtMengurusSegDtl">
+              <PropertyRef Name="BudgetMengurusID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="BudgetPerjawatan_GroupPerjawatan">
+          <End Type="OBModel.GroupPerjawatan" Role="GroupPerjawatan" Multiplicity="1" />
+          <End Type="OBModel.BudgetPerjawatan" Role="BudgetPerjawatan" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GroupPerjawatan">
+              <PropertyRef Name="GroupPerjawatanCode" />
+            </Principal>
+            <Dependent Role="BudgetPerjawatan">
+              <PropertyRef Name="GroupPerjawatanCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="BudgetPerjawatan_PeriodPerjawatan">
+          <End Type="OBModel.PeriodPerjawatan" Role="PeriodPerjawatan" Multiplicity="1" />
+          <End Type="OBModel.BudgetPerjawatan" Role="BudgetPerjawatan" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PeriodPerjawatan">
+              <PropertyRef Name="PeriodPerjawatanID" />
+            </Principal>
+            <Dependent Role="BudgetPerjawatan">
+              <PropertyRef Name="PeriodPerjawatanID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="JuncBgtPerjawatanSegDtl_BudgetPerjawatan">
+          <End Type="OBModel.BudgetPerjawatan" Role="BudgetPerjawatan" Multiplicity="1" />
+          <End Type="OBModel.JuncBgtPerjawatanSegDtl" Role="JuncBgtPerjawatanSegDtl" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BudgetPerjawatan">
+              <PropertyRef Name="BudgetPerjawatanID" />
+            </Principal>
+            <Dependent Role="JuncBgtPerjawatanSegDtl">
+              <PropertyRef Name="BudgetPerjawatanID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="PeriodMengurus_FieldPerjawatan">
+          <End Type="OBModel.FieldMenguru" Role="FieldMenguru" Multiplicity="1" />
+          <End Type="OBModel.PeriodMenguru" Role="PeriodMenguru" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FieldMenguru">
+              <PropertyRef Name="FieldMengurusID" />
+            </Principal>
+            <Dependent Role="PeriodMenguru">
+              <PropertyRef Name="FieldMengurusID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="PeriodPerjawatan_FieldPerjawatan">
+          <End Type="OBModel.FieldPerjawatan" Role="FieldPerjawatan" Multiplicity="1" />
+          <End Type="OBModel.PeriodPerjawatan" Role="PeriodPerjawatan" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FieldPerjawatan">
+              <PropertyRef Name="FieldPerjawatanID" />
+            </Principal>
+            <Dependent Role="PeriodPerjawatan">
+              <PropertyRef Name="FieldPerjawatanID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="JuncBgtMengurusSegDtl_SegmentDetail">
+          <End Type="OBModel.SegmentDetail" Role="SegmentDetail" Multiplicity="1" />
+          <End Type="OBModel.JuncBgtMengurusSegDtl" Role="JuncBgtMengurusSegDtl" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SegmentDetail">
+              <PropertyRef Name="SegmentDetailID" />
+            </Principal>
+            <Dependent Role="JuncBgtMengurusSegDtl">
+              <PropertyRef Name="SegmentDetailID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="JuncBgtPerjawatanSegDtl_SegmentDetail">
+          <End Type="OBModel.SegmentDetail" Role="SegmentDetail" Multiplicity="1" />
+          <End Type="OBModel.JuncBgtPerjawatanSegDtl" Role="JuncBgtPerjawatanSegDtl" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SegmentDetail">
+              <PropertyRef Name="SegmentDetailID" />
+            </Principal>
+            <Dependent Role="JuncBgtPerjawatanSegDtl">
+              <PropertyRef Name="SegmentDetailID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="JuncRolePage_Page">
+          <End Type="OBModel.MasterPage" Role="MasterPage" Multiplicity="0..1" />
+          <End Type="OBModel.JuncRolePage" Role="JuncRolePage" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MasterPage">
+              <PropertyRef Name="PageID" />
+            </Principal>
+            <Dependent Role="JuncRolePage">
+              <PropertyRef Name="PageID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="JuncRolePage_Role">
+          <End Type="OBModel.MasterRole" Role="MasterRole" Multiplicity="0..1" />
+          <End Type="OBModel.JuncRolePage" Role="JuncRolePage" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MasterRole">
+              <PropertyRef Name="RoleID" />
+            </Principal>
+            <Dependent Role="JuncRolePage">
+              <PropertyRef Name="RoleID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="JuncUserRole_Role">
+          <End Type="OBModel.MasterRole" Role="MasterRole" Multiplicity="0..1" />
+          <End Type="OBModel.JuncUserRole" Role="JuncUserRole" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MasterRole">
+              <PropertyRef Name="RoleID" />
+            </Principal>
+            <Dependent Role="JuncUserRole">
+              <PropertyRef Name="RoleID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Menu_Page">
+          <End Type="OBModel.MasterMenu" Role="MasterMenu" Multiplicity="0..1" />
+          <End Type="OBModel.MasterPage" Role="MasterPage" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MasterMenu">
+              <PropertyRef Name="MenuID" />
+            </Principal>
+            <Dependent Role="MasterPage">
+              <PropertyRef Name="MenuID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Role_Role">
+          <End Type="OBModel.MasterRole" Role="MasterRole" Multiplicity="0..1" />
+          <End Type="OBModel.MasterPage" Role="MasterPage" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MasterRole">
+              <PropertyRef Name="RoleID" />
+            </Principal>
+            <Dependent Role="MasterPage">
+              <PropertyRef Name="ParentPageID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="SegmentDetail_Segment">
+          <End Type="OBModel.Segment" Role="Segment" Multiplicity="0..1" />
+          <End Type="OBModel.SegmentDetail" Role="SegmentDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Segment">
+              <PropertyRef Name="SegmentID" />
+            </Principal>
+            <Dependent Role="SegmentDetail">
+              <PropertyRef Name="SegmentID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="UserMengurusWorkflow">
+          <Key>
+            <PropertyRef Name="UserMengurusWorkflowID" />
+          </Key>
+          <Property Type="Int32" Name="UserMengurusWorkflowID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="UserID" />
+          <Property Type="String" Name="AccountCode" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Status" MaxLength="1" FixedLength="true" Unicode="true" />
+          <NavigationProperty Name="AccountCode1" Relationship="OBModel.UserWorkflow_AccountCode" FromRole="UserMengurusWorkflow" ToRole="AccountCode" />
+          <NavigationProperty Name="MasterUser" Relationship="OBModel.UserWorkflow_User" FromRole="UserMengurusWorkflow" ToRole="MasterUser" />
+        </EntityType>
+        <EntityType Name="UserPerjawatanWorkflow">
+          <Key>
+            <PropertyRef Name="UserPerjawatanWorkflowID" />
+          </Key>
+          <Property Type="Int32" Name="UserPerjawatanWorkflowID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="UserID" />
+          <Property Type="String" Name="GroupPerjawatanCode" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Status" MaxLength="1" FixedLength="true" Unicode="true" />
+          <NavigationProperty Name="GroupPerjawatan" Relationship="OBModel.UserPerjawatanWorkflow_AccountCode" FromRole="UserPerjawatanWorkflow" ToRole="GroupPerjawatan" />
+          <NavigationProperty Name="MasterUser" Relationship="OBModel.UserPerjawatanWorkflow_User" FromRole="UserPerjawatanWorkflow" ToRole="MasterUser" />
+        </EntityType>
+        <Association Name="UserPerjawatanWorkflow_AccountCode">
+          <End Type="OBModel.GroupPerjawatan" Role="GroupPerjawatan" Multiplicity="0..1" />
+          <End Type="OBModel.UserPerjawatanWorkflow" Role="UserPerjawatanWorkflow" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GroupPerjawatan">
+              <PropertyRef Name="GroupPerjawatanCode" />
+            </Principal>
+            <Dependent Role="UserPerjawatanWorkflow">
+              <PropertyRef Name="GroupPerjawatanCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="AccountCode">
+          <Key>
+            <PropertyRef Name="AccountCode1" />
+          </Key>
+          <Property Type="String" Name="AccountCode1" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="AccountDesc" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ParentAccountCode" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Status" Nullable="false" MaxLength="1" FixedLength="true" Unicode="true" />
+          <Property Type="Int32" Name="CreatedBy" />
+          <Property Type="DateTime" Name="CreatedTimeStamp" Precision="6" />
+          <Property Type="Int32" Name="ModifiedBy" />
+          <Property Type="DateTime" Name="ModifiedTimeStamp" Precision="6" />
+          <Property Type="String" Name="Keterangan" MaxLength="100" FixedLength="true" Unicode="true" />
+          <Property Type="String" Name="Pengiraan" MaxLength="100" FixedLength="true" Unicode="true" />
+          <NavigationProperty Name="BudgetMengurus" Relationship="OBModel.BudgetMengurus_AccountCode" FromRole="AccountCode" ToRole="BudgetMenguru" />
+          <NavigationProperty Name="UserMengurusWorkflows" Relationship="OBModel.UserWorkflow_AccountCode" FromRole="AccountCode" ToRole="UserMengurusWorkflow" />
+          <NavigationProperty Name="BudgetProjeks" Relationship="OBModel.BudgetProjek_AccountCode" FromRole="AccountCode" ToRole="BudgetProjek" />
+        </EntityType>
+        <Association Name="BudgetMengurus_AccountCode">
+          <End Type="OBModel.AccountCode" Role="AccountCode" Multiplicity="1" />
+          <End Type="OBModel.BudgetMenguru" Role="BudgetMenguru" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AccountCode">
+              <PropertyRef Name="AccountCode1" />
+            </Principal>
+            <Dependent Role="BudgetMenguru">
+              <PropertyRef Name="AccountCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="UserWorkflow_AccountCode">
+          <End Type="OBModel.AccountCode" Role="AccountCode" Multiplicity="0..1" />
+          <End Type="OBModel.UserMengurusWorkflow" Role="UserMengurusWorkflow" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AccountCode">
+              <PropertyRef Name="AccountCode1" />
+            </Principal>
+            <Dependent Role="UserMengurusWorkflow">
+              <PropertyRef Name="AccountCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="MasterGroup">
+          <Key>
+            <PropertyRef Name="GroupID" />
+          </Key>
+          <Property Type="Int32" Name="GroupID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="GroupName" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="CreatedBy" />
+          <Property Type="DateTime" Name="CreatedTimeStamp" Precision="6" />
+          <Property Type="Int32" Name="ModifiedBy" />
+          <Property Type="DateTime" Name="ModifiedTimeStamp" Precision="6" />
+          <Property Type="String" Name="Status" MaxLength="1" FixedLength="true" Unicode="true" />
+          <NavigationProperty Name="MasterUsers" Relationship="OBModel.UserGroup" FromRole="MasterGroup" ToRole="MasterUser" />
+        </EntityType>
+        <EntityType Name="BPEventLog">
+          <Key>
+            <PropertyRef Name="EventLogID" />
+          </Key>
+          <Property Type="Int32" Name="EventLogID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Object" Nullable="false" MaxLength="75" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ObjectName" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ObjectChanges" MaxLength="1000" FixedLength="true" Unicode="true" />
+          <Property Type="String" Name="EventMassage" MaxLength="100" FixedLength="true" Unicode="true" />
+          <Property Type="String" Name="Status" MaxLength="1" FixedLength="true" Unicode="true" />
+          <Property Type="Int32" Name="CreatedBy" />
+          <Property Type="DateTime" Name="CreatedTimeStamp" Precision="6" />
+        </EntityType>
+        <EntityType Name="YearEnd">
+          <Key>
+            <PropertyRef Name="YearEndID" />
+          </Key>
+          <Property Type="Int32" Name="YearEndID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="BudgetType" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="BudgetYear" Nullable="false" />
+          <Property Type="String" Name="Status" Nullable="false" MaxLength="1" FixedLength="true" Unicode="true" />
+          <Property Type="Int32" Name="CreatedBy" />
+          <Property Type="DateTime" Name="CreatedTimeStamp" Precision="6" />
+          <Property Type="Int32" Name="ModifiedBy" />
+          <Property Type="DateTime" Name="ModifiedTimeStamp" Precision="6" />
+        </EntityType>
+        <EntityType Name="UserSegDtlWorkflow">
+          <Key>
+            <PropertyRef Name="UserSegDtlWorkflowID" />
+          </Key>
+          <Property Type="Int32" Name="UserSegDtlWorkflowID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="UserID" />
+          <Property Type="Int32" Name="SegmentDetailID" />
+          <Property Type="String" Name="Status" MaxLength="1" FixedLength="true" Unicode="true" />
+          <NavigationProperty Name="SegmentDetail" Relationship="OBModel.UserSegDtlWorkflow_SegDtls" FromRole="UserSegDtlWorkflow" ToRole="SegmentDetail" />
+          <NavigationProperty Name="MasterUser" Relationship="OBModel.UserSegDtlWorkflow_User" FromRole="UserSegDtlWorkflow" ToRole="MasterUser" />
+        </EntityType>
+        <Association Name="UserSegDtlWorkflow_SegDtls">
+          <End Type="OBModel.SegmentDetail" Role="SegmentDetail" Multiplicity="0..1" />
+          <End Type="OBModel.UserSegDtlWorkflow" Role="UserSegDtlWorkflow" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SegmentDetail">
+              <PropertyRef Name="SegmentDetailID" />
+            </Principal>
+            <Dependent Role="UserSegDtlWorkflow">
+              <PropertyRef Name="SegmentDetailID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="BPLanguage">
+          <Key>
+            <PropertyRef Name="LanguageID" />
+          </Key>
+          <Property Type="Int32" Name="LanguageID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="ControlName" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="English" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Malay" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Status" Nullable="false" MaxLength="1" FixedLength="true" Unicode="true" />
+        </EntityType>
+        <EntityType Name="MasterUser">
+          <Key>
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Type="Int32" Name="UserID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="UserName" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Passcode" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="GroupID" Nullable="false" />
+          <Property Type="String" Name="UserEmail" MaxLength="100" FixedLength="true" Unicode="true" />
+          <Property Type="String" Name="SecQuestion" MaxLength="250" FixedLength="true" Unicode="true" />
+          <Property Type="String" Name="SecAnswer" MaxLength="250" FixedLength="true" Unicode="true" />
+          <Property Type="Int32" Name="CreatedBy" />
+          <Property Type="DateTime" Name="CreatedTimeStamp" Precision="6" />
+          <Property Type="Int32" Name="ModifiedBy" />
+          <Property Type="DateTime" Name="ModifiedTimeStamp" Precision="6" />
+          <Property Type="String" Name="ICNO" MaxLength="30" FixedLength="true" Unicode="true" />
+          <Property Type="String" Name="Title" MaxLength="15" FixedLength="true" Unicode="true" />
+          <Property Type="String" Name="FullName" MaxLength="100" FixedLength="true" Unicode="true" />
+          <Property Type="String" Name="PositionGrade" MaxLength="100" FixedLength="true" Unicode="true" />
+          <Property Type="String" Name="PhoneNO" MaxLength="50" FixedLength="true" Unicode="true" />
+          <Property Type="String" Name="Fax" MaxLength="50" FixedLength="true" Unicode="true" />
+          <Property Type="String" Name="Designation" MaxLength="50" FixedLength="true" Unicode="true" />
+          <Property Type="String" Name="Department" MaxLength="50" FixedLength="true" Unicode="true" />
+          <Property Type="String" Name="PeriodOfService" MaxLength="50" FixedLength="true" Unicode="true" />
+          <Property Type="String" Name="OfficeAddress" MaxLength="250" FixedLength="true" Unicode="true" />
+          <Property Type="String" Name="Status" MaxLength="1" FixedLength="true" Unicode="true" />
+          <Property Type="String" Name="Language" MaxLength="50" FixedLength="true" Unicode="true" />
+          <NavigationProperty Name="JuncUserRoles" Relationship="OBModel.JuncUserRole_User" FromRole="MasterUser" ToRole="JuncUserRole" />
+          <NavigationProperty Name="MasterGroup" Relationship="OBModel.UserGroup" FromRole="MasterUser" ToRole="MasterGroup" />
+          <NavigationProperty Name="UserPerjawatanWorkflows" Relationship="OBModel.UserPerjawatanWorkflow_User" FromRole="MasterUser" ToRole="UserPerjawatanWorkflow" />
+          <NavigationProperty Name="UserSegDtlWorkflows" Relationship="OBModel.UserSegDtlWorkflow_User" FromRole="MasterUser" ToRole="UserSegDtlWorkflow" />
+          <NavigationProperty Name="UserMengurusWorkflows" Relationship="OBModel.UserWorkflow_User" FromRole="MasterUser" ToRole="UserMengurusWorkflow" />
+        </EntityType>
+        <Association Name="JuncUserRole_User">
+          <End Type="OBModel.MasterUser" Role="MasterUser" Multiplicity="0..1" />
+          <End Type="OBModel.JuncUserRole" Role="JuncUserRole" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MasterUser">
+              <PropertyRef Name="UserID" />
+            </Principal>
+            <Dependent Role="JuncUserRole">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="UserGroup">
+          <End Type="OBModel.MasterGroup" Role="MasterGroup" Multiplicity="1" />
+          <End Type="OBModel.MasterUser" Role="MasterUser" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MasterGroup">
+              <PropertyRef Name="GroupID" />
+            </Principal>
+            <Dependent Role="MasterUser">
+              <PropertyRef Name="GroupID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="UserPerjawatanWorkflow_User">
+          <End Type="OBModel.MasterUser" Role="MasterUser" Multiplicity="0..1" />
+          <End Type="OBModel.UserPerjawatanWorkflow" Role="UserPerjawatanWorkflow" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MasterUser">
+              <PropertyRef Name="UserID" />
+            </Principal>
+            <Dependent Role="UserPerjawatanWorkflow">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="UserSegDtlWorkflow_User">
+          <End Type="OBModel.MasterUser" Role="MasterUser" Multiplicity="0..1" />
+          <End Type="OBModel.UserSegDtlWorkflow" Role="UserSegDtlWorkflow" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MasterUser">
+              <PropertyRef Name="UserID" />
+            </Principal>
+            <Dependent Role="UserSegDtlWorkflow">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="UserWorkflow_User">
+          <End Type="OBModel.MasterUser" Role="MasterUser" Multiplicity="0..1" />
+          <End Type="OBModel.UserMengurusWorkflow" Role="UserMengurusWorkflow" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MasterUser">
+              <PropertyRef Name="UserID" />
+            </Principal>
+            <Dependent Role="UserMengurusWorkflow">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="YearUploadSetup">
+          <Key>
+            <PropertyRef Name="BudgetYearID" />
+          </Key>
+          <Property Type="Int32" Name="BudgetYear" />
+          <Property Type="String" Name="BudgetYearDesc" MaxLength="8000" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Status" MaxLength="1" FixedLength="true" Unicode="true" />
+          <Property Type="Int32" Name="CreatedBy" />
+          <Property Type="DateTime" Name="CreatedTimeStamp" Precision="6" />
+          <Property Type="Int32" Name="ModifiedBy" />
+          <Property Type="DateTime" Name="ModifiedTimeStamp" Precision="6" />
+          <Property Type="Int32" Name="BudgetYearID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="BudgetProjek">
+          <Key>
+            <PropertyRef Name="BudgetProjekID" />
+          </Key>
+          <Property Type="Int32" Name="BudgetProjekID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="PeriodMengurusID" Nullable="false" />
+          <Property Type="String" Name="AccountCode" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="Decimal" Name="Amount" Nullable="false" Precision="16" Scale="2" />
+          <Property Type="String" Name="Status" Nullable="false" MaxLength="1" FixedLength="true" Unicode="true" />
+          <Property Type="String" Name="Remarks" MaxLength="500" FixedLength="true" Unicode="true" />
+          <Property Type="Int32" Name="CreatedBy" />
+          <Property Type="DateTime" Name="CreatedTimeStamp" Precision="6" />
+          <Property Type="Int32" Name="ModifiedBy" />
+          <Property Type="DateTime" Name="ModifiedTimeStamp" Precision="6" />
+          <NavigationProperty Name="AccountCode1" Relationship="OBModel.BudgetProjek_AccountCode" FromRole="BudgetProjek" ToRole="AccountCode" />
+          <NavigationProperty Name="PeriodMenguru" Relationship="OBModel.BudgetProjek_PeriodMengurus" FromRole="BudgetProjek" ToRole="PeriodMenguru" />
+          <NavigationProperty Name="JuncBgtProjekSegDtls" Relationship="OBModel.JuncBgtProjekSegDtl_BudgetProjek" FromRole="BudgetProjek" ToRole="JuncBgtProjekSegDtl" />
+        </EntityType>
+        <EntityType Name="JuncBgtProjekSegDtl">
+          <Key>
+            <PropertyRef Name="JuncBgtProjekSegDtlID" />
+          </Key>
+          <Property Type="Int32" Name="JuncBgtProjekSegDtlID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="BudgetProjekID" Nullable="false" />
+          <Property Type="Int32" Name="SegmentDetailID" Nullable="false" />
+          <Property Type="Int32" Name="CreatedBy" />
+          <Property Type="DateTime" Name="CreatedTimeStamp" Precision="6" />
+          <Property Type="Int32" Name="ModifiedBy" />
+          <Property Type="DateTime" Name="ModifiedTimeStamp" Precision="6" />
+          <NavigationProperty Name="BudgetProjek" Relationship="OBModel.JuncBgtProjekSegDtl_BudgetProjek" FromRole="JuncBgtProjekSegDtl" ToRole="BudgetProjek" />
+          <NavigationProperty Name="SegmentDetail" Relationship="OBModel.JuncBgtProjekSegDtl_SegmentDetail" FromRole="JuncBgtProjekSegDtl" ToRole="SegmentDetail" />
+        </EntityType>
+        <Association Name="BudgetProjek_AccountCode">
+          <End Type="OBModel.AccountCode" Role="AccountCode" Multiplicity="1" />
+          <End Type="OBModel.BudgetProjek" Role="BudgetProjek" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AccountCode">
+              <PropertyRef Name="AccountCode1" />
+            </Principal>
+            <Dependent Role="BudgetProjek">
+              <PropertyRef Name="AccountCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="BudgetProjek_PeriodMengurus">
+          <End Type="OBModel.PeriodMenguru" Role="PeriodMenguru" Multiplicity="1" />
+          <End Type="OBModel.BudgetProjek" Role="BudgetProjek" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PeriodMenguru">
+              <PropertyRef Name="PeriodMengurusID" />
+            </Principal>
+            <Dependent Role="BudgetProjek">
+              <PropertyRef Name="PeriodMengurusID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="JuncBgtProjekSegDtl_BudgetProjek">
+          <End Type="OBModel.BudgetProjek" Role="BudgetProjek" Multiplicity="1" />
+          <End Type="OBModel.JuncBgtProjekSegDtl" Role="JuncBgtProjekSegDtl" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BudgetProjek">
+              <PropertyRef Name="BudgetProjekID" />
+            </Principal>
+            <Dependent Role="JuncBgtProjekSegDtl">
+              <PropertyRef Name="BudgetProjekID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="JuncBgtProjekSegDtl_SegmentDetail">
+          <End Type="OBModel.SegmentDetail" Role="SegmentDetail" Multiplicity="1" />
+          <End Type="OBModel.JuncBgtProjekSegDtl" Role="JuncBgtProjekSegDtl" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SegmentDetail">
+              <PropertyRef Name="SegmentDetailID" />
+            </Principal>
+            <Dependent Role="JuncBgtProjekSegDtl">
+              <PropertyRef Name="SegmentDetailID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="OBModelStoreContainer" CdmEntityContainer="OBEntities">
+          <EntitySetMapping Name="BudgetMengurus">
+            <EntityTypeMapping TypeName="OBModel.BudgetMenguru">
+              <MappingFragment StoreEntitySet="BudgetMengurus">
+                <ScalarProperty Name="ModifiedTimeStamp" ColumnName="ModifiedTimeStamp" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="CreatedTimeStamp" ColumnName="CreatedTimeStamp" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="AccountCode" ColumnName="AccountCode" />
+                <ScalarProperty Name="PeriodMengurusID" ColumnName="PeriodMengurusID" />
+                <ScalarProperty Name="BudgetMengurusID" ColumnName="BudgetMengurusID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BudgetPerjawatans">
+            <EntityTypeMapping TypeName="OBModel.BudgetPerjawatan">
+              <MappingFragment StoreEntitySet="BudgetPerjawatan">
+                <ScalarProperty Name="ModifiedTimeStamp" ColumnName="ModifiedTimeStamp" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="CreatedTimeStamp" ColumnName="CreatedTimeStamp" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="GroupPerjawatanCode" ColumnName="GroupPerjawatanCode" />
+                <ScalarProperty Name="PeriodPerjawatanID" ColumnName="PeriodPerjawatanID" />
+                <ScalarProperty Name="BudgetPerjawatanID" ColumnName="BudgetPerjawatanID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FieldMengurus">
+            <EntityTypeMapping TypeName="OBModel.FieldMenguru">
+              <MappingFragment StoreEntitySet="FieldMengurus">
+                <ScalarProperty Name="ModifiedTimeStamp" ColumnName="ModifiedTimeStamp" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="CreatedTimeStamp" ColumnName="CreatedTimeStamp" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="FieldMengurusDesc" ColumnName="FieldMengurusDesc" />
+                <ScalarProperty Name="FieldMengurusSDesc" ColumnName="FieldMengurusSDesc" />
+                <ScalarProperty Name="FieldMengurusID" ColumnName="FieldMengurusID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FieldPerjawatans">
+            <EntityTypeMapping TypeName="OBModel.FieldPerjawatan">
+              <MappingFragment StoreEntitySet="FieldPerjawatan">
+                <ScalarProperty Name="ModifiedTimeStamp" ColumnName="ModifiedTimeStamp" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="CreatedTimeStamp" ColumnName="CreatedTimeStamp" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="FieldPerjawatanDesc" ColumnName="FieldPerjawatanDesc" />
+                <ScalarProperty Name="FieldPerjawatanSDesc" ColumnName="FieldPerjawatanSDesc" />
+                <ScalarProperty Name="FieldPerjawatanID" ColumnName="FieldPerjawatanID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="GroupPerjawatans">
+            <EntityTypeMapping TypeName="OBModel.GroupPerjawatan">
+              <MappingFragment StoreEntitySet="GroupPerjawatan">
+                <ScalarProperty Name="ModifiedTimeStamp" ColumnName="ModifiedTimeStamp" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="CreatedTimeStamp" ColumnName="CreatedTimeStamp" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="ParentGroupPerjawatanID" ColumnName="ParentGroupPerjawatanID" />
+                <ScalarProperty Name="GroupPerjawatanDesc" ColumnName="GroupPerjawatanDesc" />
+                <ScalarProperty Name="GroupPerjawatanCode" ColumnName="GroupPerjawatanCode" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="JuncBgtMengurusSegDtls">
+            <EntityTypeMapping TypeName="OBModel.JuncBgtMengurusSegDtl">
+              <MappingFragment StoreEntitySet="JuncBgtMengurusSegDtl">
+                <ScalarProperty Name="ModifiedTimeStamp" ColumnName="ModifiedTimeStamp" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="CreatedTimeStamp" ColumnName="CreatedTimeStamp" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="SegmentDetailID" ColumnName="SegmentDetailID" />
+                <ScalarProperty Name="BudgetMengurusID" ColumnName="BudgetMengurusID" />
+                <ScalarProperty Name="JuncBgtMengurusSegDtlID" ColumnName="JuncBgtMengurusSegDtlID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="JuncBgtPerjawatanSegDtls">
+            <EntityTypeMapping TypeName="OBModel.JuncBgtPerjawatanSegDtl">
+              <MappingFragment StoreEntitySet="JuncBgtPerjawatanSegDtl">
+                <ScalarProperty Name="ModifiedTimeStamp" ColumnName="ModifiedTimeStamp" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="CreatedTimeStamp" ColumnName="CreatedTimeStamp" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="SegmentDetailID" ColumnName="SegmentDetailID" />
+                <ScalarProperty Name="BudgetPerjawatanID" ColumnName="BudgetPerjawatanID" />
+                <ScalarProperty Name="JuncBgtPerjawatanSegDtlID" ColumnName="JuncBgtPerjawatanSegDtlID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="JuncRolePages">
+            <EntityTypeMapping TypeName="OBModel.JuncRolePage">
+              <MappingFragment StoreEntitySet="JuncRolePage">
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="PageID" ColumnName="PageID" />
+                <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+                <ScalarProperty Name="JuncRolePageID" ColumnName="JuncRolePageID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="JuncUserRoles">
+            <EntityTypeMapping TypeName="OBModel.JuncUserRole">
+              <MappingFragment StoreEntitySet="JuncUserRole">
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="JuncUserRoleID" ColumnName="JuncUserRoleID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MasterMenus">
+            <EntityTypeMapping TypeName="OBModel.MasterMenu">
+              <MappingFragment StoreEntitySet="MasterMenu">
+                <ScalarProperty Name="MenuIcon" ColumnName="MenuIcon" />
+                <ScalarProperty Name="MenuOrder" ColumnName="MenuOrder" />
+                <ScalarProperty Name="MenuName" ColumnName="MenuName" />
+                <ScalarProperty Name="MenuID" ColumnName="MenuID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MasterPages">
+            <EntityTypeMapping TypeName="OBModel.MasterPage">
+              <MappingFragment StoreEntitySet="MasterPage">
+                <ScalarProperty Name="MenuID" ColumnName="MenuID" />
+                <ScalarProperty Name="ParentPageID" ColumnName="ParentPageID" />
+                <ScalarProperty Name="PageOrder" ColumnName="PageOrder" />
+                <ScalarProperty Name="PagePath" ColumnName="PagePath" />
+                <ScalarProperty Name="PageName" ColumnName="PageName" />
+                <ScalarProperty Name="PageID" ColumnName="PageID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MasterRoles">
+            <EntityTypeMapping TypeName="OBModel.MasterRole">
+              <MappingFragment StoreEntitySet="MasterRole">
+                <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+                <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PeriodMengurus">
+            <EntityTypeMapping TypeName="OBModel.PeriodMenguru">
+              <MappingFragment StoreEntitySet="PeriodMengurus">
+                <ScalarProperty Name="ModifiedTimeStamp" ColumnName="ModifiedTimeStamp" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="CreatedTimeStamp" ColumnName="CreatedTimeStamp" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="MengurusYear" ColumnName="MengurusYear" />
+                <ScalarProperty Name="FieldMengurusID" ColumnName="FieldMengurusID" />
+                <ScalarProperty Name="PeriodMengurusID" ColumnName="PeriodMengurusID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PeriodPerjawatans">
+            <EntityTypeMapping TypeName="OBModel.PeriodPerjawatan">
+              <MappingFragment StoreEntitySet="PeriodPerjawatan">
+                <ScalarProperty Name="ModifiedTimeStamp" ColumnName="ModifiedTimeStamp" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="CreatedTimeStamp" ColumnName="CreatedTimeStamp" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="PerjawatanYear" ColumnName="PerjawatanYear" />
+                <ScalarProperty Name="FieldPerjawatanID" ColumnName="FieldPerjawatanID" />
+                <ScalarProperty Name="PeriodPerjawatanID" ColumnName="PeriodPerjawatanID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Segments">
+            <EntityTypeMapping TypeName="OBModel.Segment">
+              <MappingFragment StoreEntitySet="Segment">
+                <ScalarProperty Name="ModifiedTimeStamp" ColumnName="ModifiedTimeStamp" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="CreatedTimeStamp" ColumnName="CreatedTimeStamp" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="ShapeFormat" ColumnName="ShapeFormat" />
+                <ScalarProperty Name="SegmentOrder" ColumnName="SegmentOrder" />
+                <ScalarProperty Name="SegmentName" ColumnName="SegmentName" />
+                <ScalarProperty Name="SegmentID" ColumnName="SegmentID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SegmentDetails">
+            <EntityTypeMapping TypeName="OBModel.SegmentDetail">
+              <MappingFragment StoreEntitySet="SegmentDetail">
+                <ScalarProperty Name="ModifiedTimeStamp" ColumnName="ModifiedTimeStamp" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="CreatedTimeStamp" ColumnName="CreatedTimeStamp" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="ParentDetailID" ColumnName="ParentDetailID" />
+                <ScalarProperty Name="DetailDesc" ColumnName="DetailDesc" />
+                <ScalarProperty Name="DetailCode" ColumnName="DetailCode" />
+                <ScalarProperty Name="SegmentID" ColumnName="SegmentID" />
+                <ScalarProperty Name="SegmentDetailID" ColumnName="SegmentDetailID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserMengurusWorkflows">
+            <EntityTypeMapping TypeName="OBModel.UserMengurusWorkflow">
+              <MappingFragment StoreEntitySet="UserMengurusWorkflow">
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="AccountCode" ColumnName="AccountCode" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="UserMengurusWorkflowID" ColumnName="UserMengurusWorkflowID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserPerjawatanWorkflows">
+            <EntityTypeMapping TypeName="OBModel.UserPerjawatanWorkflow">
+              <MappingFragment StoreEntitySet="UserPerjawatanWorkflow">
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="GroupPerjawatanCode" ColumnName="GroupPerjawatanCode" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="UserPerjawatanWorkflowID" ColumnName="UserPerjawatanWorkflowID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AccountCodes">
+            <EntityTypeMapping TypeName="OBModel.AccountCode">
+              <MappingFragment StoreEntitySet="AccountCode">
+                <ScalarProperty Name="Pengiraan" ColumnName="Pengiraan" />
+                <ScalarProperty Name="Keterangan" ColumnName="Keterangan" />
+                <ScalarProperty Name="ModifiedTimeStamp" ColumnName="ModifiedTimeStamp" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="CreatedTimeStamp" ColumnName="CreatedTimeStamp" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="ParentAccountCode" ColumnName="ParentAccountCode" />
+                <ScalarProperty Name="AccountDesc" ColumnName="AccountDesc" />
+                <ScalarProperty Name="AccountCode1" ColumnName="AccountCode" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MasterGroups">
+            <EntityTypeMapping TypeName="OBModel.MasterGroup">
+              <MappingFragment StoreEntitySet="MasterGroup">
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="ModifiedTimeStamp" ColumnName="ModifiedTimeStamp" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="CreatedTimeStamp" ColumnName="CreatedTimeStamp" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="GroupName" ColumnName="GroupName" />
+                <ScalarProperty Name="GroupID" ColumnName="GroupID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BPEventLogs">
+            <EntityTypeMapping TypeName="OBModel.BPEventLog">
+              <MappingFragment StoreEntitySet="BPEventLog">
+                <ScalarProperty Name="CreatedTimeStamp" ColumnName="CreatedTimeStamp" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="EventMassage" ColumnName="EventMassage" />
+                <ScalarProperty Name="ObjectChanges" ColumnName="ObjectChanges" />
+                <ScalarProperty Name="ObjectName" ColumnName="ObjectName" />
+                <ScalarProperty Name="Object" ColumnName="Object" />
+                <ScalarProperty Name="EventLogID" ColumnName="EventLogID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="YearEnds">
+            <EntityTypeMapping TypeName="OBModel.YearEnd">
+              <MappingFragment StoreEntitySet="YearEnd">
+                <ScalarProperty Name="ModifiedTimeStamp" ColumnName="ModifiedTimeStamp" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="CreatedTimeStamp" ColumnName="CreatedTimeStamp" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="BudgetYear" ColumnName="BudgetYear" />
+                <ScalarProperty Name="BudgetType" ColumnName="BudgetType" />
+                <ScalarProperty Name="YearEndID" ColumnName="YearEndID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserSegDtlWorkflows">
+            <EntityTypeMapping TypeName="OBModel.UserSegDtlWorkflow">
+              <MappingFragment StoreEntitySet="UserSegDtlWorkflow">
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="SegmentDetailID" ColumnName="SegmentDetailID" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="UserSegDtlWorkflowID" ColumnName="UserSegDtlWorkflowID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BPLanguages">
+            <EntityTypeMapping TypeName="OBModel.BPLanguage">
+              <MappingFragment StoreEntitySet="BPLanguage">
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Malay" ColumnName="Malay" />
+                <ScalarProperty Name="English" ColumnName="English" />
+                <ScalarProperty Name="ControlName" ColumnName="ControlName" />
+                <ScalarProperty Name="LanguageID" ColumnName="LanguageID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MasterUsers">
+            <EntityTypeMapping TypeName="OBModel.MasterUser">
+              <MappingFragment StoreEntitySet="MasterUser">
+                <ScalarProperty Name="Language" ColumnName="Language" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="OfficeAddress" ColumnName="OfficeAddress" />
+                <ScalarProperty Name="PeriodOfService" ColumnName="PeriodOfService" />
+                <ScalarProperty Name="Department" ColumnName="Department" />
+                <ScalarProperty Name="Designation" ColumnName="Designation" />
+                <ScalarProperty Name="Fax" ColumnName="Fax" />
+                <ScalarProperty Name="PhoneNO" ColumnName="PhoneNO" />
+                <ScalarProperty Name="PositionGrade" ColumnName="PositionGrade" />
+                <ScalarProperty Name="FullName" ColumnName="FullName" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="ICNO" ColumnName="ICNO" />
+                <ScalarProperty Name="ModifiedTimeStamp" ColumnName="ModifiedTimeStamp" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="CreatedTimeStamp" ColumnName="CreatedTimeStamp" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="SecAnswer" ColumnName="SecAnswer" />
+                <ScalarProperty Name="SecQuestion" ColumnName="SecQuestion" />
+                <ScalarProperty Name="UserEmail" ColumnName="UserEmail" />
+                <ScalarProperty Name="GroupID" ColumnName="GroupID" />
+                <ScalarProperty Name="Passcode" ColumnName="Passcode" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="YearUploadSetups">
+            <EntityTypeMapping TypeName="OBModel.YearUploadSetup">
+              <MappingFragment StoreEntitySet="YearUploadSetup">
+                <ScalarProperty Name="BudgetYearID" ColumnName="BudgetYearID" />
+                <ScalarProperty Name="ModifiedTimeStamp" ColumnName="ModifiedTimeStamp" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="CreatedTimeStamp" ColumnName="CreatedTimeStamp" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="BudgetYearDesc" ColumnName="BudgetYearDesc" />
+                <ScalarProperty Name="BudgetYear" ColumnName="BudgetYear" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BudgetProjeks">
+            <EntityTypeMapping TypeName="OBModel.BudgetProjek">
+              <MappingFragment StoreEntitySet="BudgetProjek">
+                <ScalarProperty Name="ModifiedTimeStamp" ColumnName="ModifiedTimeStamp" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="CreatedTimeStamp" ColumnName="CreatedTimeStamp" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="AccountCode" ColumnName="AccountCode" />
+                <ScalarProperty Name="PeriodMengurusID" ColumnName="PeriodMengurusID" />
+                <ScalarProperty Name="BudgetProjekID" ColumnName="BudgetProjekID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="JuncBgtProjekSegDtls">
+            <EntityTypeMapping TypeName="OBModel.JuncBgtProjekSegDtl">
+              <MappingFragment StoreEntitySet="JuncBgtProjekSegDtl">
+                <ScalarProperty Name="ModifiedTimeStamp" ColumnName="ModifiedTimeStamp" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="CreatedTimeStamp" ColumnName="CreatedTimeStamp" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="SegmentDetailID" ColumnName="SegmentDetailID" />
+                <ScalarProperty Name="BudgetProjekID" ColumnName="BudgetProjekID" />
+                <ScalarProperty Name="JuncBgtProjekSegDtlID" ColumnName="JuncBgtProjekSegDtlID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
